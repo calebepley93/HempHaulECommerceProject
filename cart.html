@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Hemp Haul CBD Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link 
+   rel="stylesheet" 
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+   integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+   crossorigin="anonymous" 
+   referrerpolicy="no-referrer" 
+  />
+  </head>
+  <body>
+    <header class="header">
+        <div class="logo">
+          <img src="./Logo.jpg">
+        </div>
+        <p class="navbarelement"><a href = "index.html">Home</a></p>
+        <p class="navbarelement"><a href = "shop.html">Shop</a></p>
+        <p class="navbarelement"><a href="./aboutus.html">About</a></p>
+        <p class="navbarelement"><a href="./contact.html">Contact</a></p>
+        <div class="cartIconContainer">
+          <a href="./cart.html" class="cartIcon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count"></span>
+            <p class="emptyCartMessage2">Your cart is empty.</p>
+            <div class="dropdown-content">
+              <div class="product-Info">
+                <img class="dropImg">
+                <div class="productValues">
+                 <a class="nameValues">Product name</a>
+                 <span class="QPvalues">(val - product quantity) x ProductPrice</span>
+                </div>
+                <button>X</button>
+              </div>
+              <p class="dropdownSubtotal">Subtotal: (price of all quanitity * products in cart)</p>
+              <div class="dropdownButtons">
+                <a href="cart.html" class="dropdownCartButton">View Cart</a>
+                <a href="checkout.html" class="dropdownCheckOutButton">Check Out</a>
+              </div>
+            </div>
+          </a>
+        </div>
+      </header>
+      <h1 class="cartTitle">Cart</h1>
+      <div id="empty-cart-message" style="display: none;">
+        Your cart is currently empty.
+      </div>      
+      <div class="cart-header" id="cart-header">
+        <div></div> <!-- empty div for alignment -->
+        <div></div> <!-- empty div for alignment -->
+        <div class="headerClass">Product</div>
+        <div>Quantity</div>
+        <div class="headerSubt">Subtotal</div>
+      </div>
+      <div class="cart">
+       <!-- Repeat this section for each item in the cart -->
+       <div id="default-item" class="cart-item">
+        <button class="remove-item-btn">X</button>
+        <img class="product-img" src="product.jpg" alt="Product Name" />
+        <div class="product-name">Product Name</div>
+        <input class="product-quantity" type="number" value="1" min="1" />
+        <div class="product-subtotal">$xx.xx</div>
+      </div>
+      <!-- End of cart item section -->
+      </div>
+      <button id="update-cart-btn" class="update-cart-btn">Update Cart</button>
+      <a id="return-to-shop" class="return-to-shop" href="./shop.html">Return to Shop</a>
+      <div id="orderInform">
+        <div class="subtotalSpan">
+           <p>Subtotal<p>
+        </div>
+        <div class="shippingSpan">
+           <p>Shipping</p>
+           <p>USPS Priority Mail: $9.95</p>
+        </div>
+        <p>Shipping options will be updated during checkout.</p>
+        <div class="totalSpan">
+           <p>Total</p>
+           <p>Sum of all product subtotals + $9.95 shipping</p>
+        </div>
+        <a href="./checkout.html"><button id="proceed-checkout-btn" class="proceed-checkout-btn">Proceed to checkout</button></a>
+      </div>
+      <div class="emailform">
+        <img src="./airplane.png" alt="Paper Airplane" class="airplane-img">
+        <p class="promo-text">Want to receive discounts, promos, special offers, and 20% off your next purchase?</p>
+        <input type="text" id="email-field" placeholder="Enter your email...">
+        <button class="signup-button">Sign up</button>
+      </div>
+      <div class="body4">
+        <img src="./Logo.jpg" alt="logo" class="logo3">
+        <h1 class="indexh1">Hemp Haul</h1>
+        <p class="centered-text1">Our mission is to serve the highest quality cannabis products online. Shop CBD, CBC, CBG, CBN, Delta-8-THC, Delta-9-THC, Delta-10-THC, HHC, and High-THCa products with confidence. Customer Satisfaction is of the highest importance. Please don’t hesitate to reach out. Thanks for shopping Hemp Haul!</p>
+        <hr class="divider">
+        <p class="right-aligned-text">Disclaimer: HempHaul will not be held responsible for any claims or testimonials regarding medical efficacy of any of our products. The FDA (Food and Drug Administration) has not evaluated any of these statements, nor have the claims been confirmed by FDA-acknowledged research. Neither our staff nor our products are intended to diagnose, cure, prevent, or treat any disease or medical condition. Please consult your physician before including any of our products in your wellness plan.</p>
+        <p class="copyright">Hemp Haul © 2023. All Rights Reserved.</p>
+     </div>
+    <script src="main.js"></script>
+    <script>
+        function itemAddedToCart() {
+          var defaultItem = document.getElementById('default-item');
+          if(defaultItem){
+              defaultItem.style.display = 'none';
+          }
+        }
+      
+        window.onload = function() {
+          // Get the current cart from localStorage
+          var cart = JSON.parse(localStorage.getItem('cart')) || [];
+          // If the cart has items in it, hide the default item
+          if (cart.length > 0) {
+            itemAddedToCart();
+          }
+          renderCart();
+          updateOrderInformation();
+          updateCartDropdown();
+          updateCartCount();
+        };
+      
+        function renderCart() {
+          // get the current cart from localStorage
+          var cart = JSON.parse(localStorage.getItem('cart')) || [];
+          
+          // find the cart container in your HTML
+          var cartContainer = document.querySelector('.cart');
+          var emptyCartMessage = document.getElementById('empty-cart-message');
+          var cartHeader = document.getElementById('cart-header');
+          var updateCartButton = document.getElementById('update-cart-btn');
+          updateCartButton.addEventListener('click', function() {
+            // Get the current cart from localStorage
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Loop through each item in the cart
+            cart.forEach(function(product) {
+              // Find the quantity field for this item
+              var quantityField = cartContainer.querySelector('.cart-item[data-product-name="' + product.name + '"] .product-quantity');
+              
+              // Update the quantity in the cart with the quantity from the field
+              product.quantity = parseInt(quantityField.value);
+              
+              // Update the subtotal for this item
+              var productSubtotal = (product.price * product.quantity).toFixed(2);
+              var subtotalField = cartContainer.querySelector('.cart-item[data-product-name="' + product.name + '"] .product-subtotal');
+              subtotalField.textContent = '$' + productSubtotal;
+            });
+            
+            // Store the updated cart back into localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+          
+            // Change the color of the update button back to its original color and disable it until the next change
+            updateCartButton.style.backgroundColor = '';  // Change this to your original color
+            updateCartButton.disabled = true;
+            updateOrderInformation();
+          });
+          
+          var proceedCheckoutButton = document.getElementById('proceed-checkout-btn');
+          var returnToShopButton = document.getElementById('return-to-shop');
+          var orderInformSection = document.getElementById('orderInform');
+  
+    if (cart.length === 0) {
+      // if the cart is empty, show the empty message and hide the header
+      emptyCartMessage.style.display = 'block';
+      cartHeader.style.display = 'none';
+      returnToShopButton.style.display = '';
+      updateCartButton.style.display = 'none';
+      proceedCheckoutButton.style.display = 'none';
+      orderInformSection.style.display = 'none';
+    } else {
+      // if the cart is not empty, hide the empty message and show the header
+      emptyCartMessage.style.display = 'none';
+      cartHeader.style.display = '';
+      returnToShopButton.style.display = 'none';
+      updateCartButton.style.display = '';
+      proceedCheckoutButton.style.display = '';
+      orderInformSection.style.display = '';
+    }
+          cartContainer.innerHTML = '';  // clear the current cart HTML
+
+        
+          // for each product in the cart, create the HTML and append it to the container
+          cart.forEach(function(product) {
+            var productSubtotal = (product.price * product.quantity).toFixed(2); // calculate subtotal and format to 2 decimal places
+            var cartItemHtml = `
+              <div class="cart-item" data-product-name="${product.name}">
+                <button class="remove-item-btn">X</button>
+                <img class="product-img" src="${product.imgSrc}" alt="${product.name}" />
+                <div class="product-name">${product.name}</div>
+                <input class="product-quantity" type="number" value="${product.quantity}" min="1" />
+                <div class="product-subtotal">$${productSubtotal}</div>
+              </div>
+            `;
+            cartContainer.innerHTML += cartItemHtml;
+            // Find the quantity field for the item we just added, and add an event listener to it
+var quantityField = cartContainer.querySelector('.cart-item[data-product-name="' + product.name + '"] .product-quantity');
+quantityField.addEventListener('input', function() {
+  updateCartButton.style.backgroundColor = 'black';  // Change the color of the update button
+  updateCartButton.disabled = false;  // Enable the update button
+});
+
+            attachRemoveButtonListeners(cart);
+            var tempElement = document.createElement('div');
+            tempElement.innerHTML = cartItemHtml;
+          
+            // Find the quantity field in the temporary element and add an event listener to it
+            var quantityField = tempElement.querySelector('.product-quantity');
+            quantityField.addEventListener('input', function() {
+              updateCartButton.style.backgroundColor = 'black';  // Change the color of the update button
+              updateCartButton.disabled = false;  // Enable the update button
+            });
+          
+            // Append the temporary element's first child (which is our cart item) to the cartContainer
+            cartContainer.appendChild(tempElement.firstChild);
+          });
+        }
+  
+      
+        function attachRemoveButtonListeners(cart) {
+          // add an event listener to each "remove" button
+          var removeItemButtons = document.querySelectorAll('.remove-item-btn');
+          removeItemButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+              // get the product name from the parent div's data attribute
+              var productName = event.target.parentElement.dataset.productName;
+              
+              // find the product in the cart and remove it
+              var productIndex = cart.findIndex(function(product) {
+                return product.name === productName;
+              });
+              if (productIndex !== -1) {
+                cart.splice(productIndex, 1);
+              }
+        
+              // update the cart in localStorage
+              localStorage.setItem('cart', JSON.stringify(cart));
+              
+              // re-render the cart
+              renderCart();
+            });
+          });
+        };
+
+
+        function updateOrderInformation() {
+          // Get the current cart from localStorage
+          var cart = JSON.parse(localStorage.getItem('cart')) || [];
+          
+          // Calculate the subtotal of all items in the cart
+          var subtotal = 0;
+          cart.forEach(function(product) {
+            subtotal += product.price * product.quantity;
+          });
+          subtotal = subtotal.toFixed(2);  // Format to 2 decimal places
+        
+          // Calculate the total (subtotal + shipping)
+          var shipping = 9.95;  // This is your shipping cost
+          var total = (parseFloat(subtotal) + shipping).toFixed(2);  // Format to 2 decimal places
+        
+          // Display the subtotal and total in the "orderInform" section
+          var subtotalField = document.getElementById('orderInform').querySelector('div:first-child p:nth-child(2)');
+          var totalField = document.getElementById('orderInform').querySelector('div:nth-child(4) p:nth-child(2)');
+          subtotalField.textContent = "$" + subtotal;
+          totalField.textContent = "$" + total;
+        }
+        
+        // This function creates HTML for each product in the cart
+function createCartItemHTML(product) {
+  return `
+  <div class="product-Info">
+    <div class="product-details">
+    <img src="${product.imgSrc}" alt="${product.name}">
+    <div class="productValues">
+      <a href="#" class="nameValues">${product.name}</a>
+      <span class="QPvalues">${product.quantity} x $${product.price}</span>
+    </div>
+  </div>
+    <button class="remove-item" data-product="${product.name}">X</button>
+  </div>
+  `;
+}
+
+// This function updates the dropdown menu
+function updateCartDropdown() {
+  // get cart from local storage
+  var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // get dropdown content element
+  var dropdownContent = document.querySelector('.dropdown-content');
+
+  // clear previous cart items from the dropdown
+  dropdownContent.innerHTML = '';
+
+  // check if the cart is empty
+  if (cart.length === 0) {
+    // if the cart is empty, show the empty message and return early to exit the function
+    dropdownContent.innerHTML = '<p class="emptyMessage2">Your cart is empty.</p>';
+  } else {
+    // create HTML for each product in the cart
+    cart.forEach(function(product) {
+      var productHTML = createCartItemHTML(product);
+      dropdownContent.innerHTML += productHTML;
+    });
+
+    // calculate and display total price
+    var totalPrice = cart.reduce(function(sum, product) {
+      return sum + product.price * product.quantity;
+    }, 0);
+
+    dropdownContent.innerHTML += `<p class="dropdownSubtotal">Subtotal: $${totalPrice.toFixed(2)}</p>`;
+  
+    var dropdownButtons = document.createElement('div');
+    dropdownButtons.className = 'dropdownButtons';
+    dropdownButtons.innerHTML = `
+      <a href="cart.html" class="dropdownCartButton">View Cart</a>
+      <a href="checkout.html" class="dropdownCheckOutButton">Check Out</a>
+    `;
+    dropdownContent.appendChild(dropdownButtons);
+  }
+}
+
+// This event listener removes items from the cart when the 'X' button is clicked in the dropdown menu
+document.querySelector('.dropdown-content').addEventListener('click', function(event) {
+  if (event.target.classList.contains('remove-item')) {
+    var productName = event.target.dataset.product;
+    removeFromCart(productName);
+  }
+});
+
+// This function removes the product from the cart and updates the dropdown menu
+function removeFromCart(productName) {
+  var cart = JSON.parse(localStorage.getItem('cart')) || [];
+  var updatedCart = cart.filter(function(product) {
+    return product.name !== productName;
+  });
+  localStorage.setItem('cart', JSON.stringify(updatedCart));
+  updateCartDropdown();
+}
+
+// Calls the function to update the dropdown menu after the page loads
+document.addEventListener('DOMContentLoaded', function() {
+  updateCartDropdown();
+});
+
+function updateCartCount() {
+  var cart = JSON.parse(localStorage.getItem('cart')) || [];
+  var totalQuantity = cart.reduce(function(total, item) {
+    return total + item.quantity;
+  }, 0);
+
+  document.querySelector('.cart-count').innerText = totalQuantity;
+}
+
+    </script>
+    
+  </body>
+  </html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Hemp Haul CBD Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link 
+   rel="stylesheet" 
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+   integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+   crossorigin="anonymous" 
+   referrerpolicy="no-referrer" 
+  />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="./Logo.jpg">
+      </div>
+      <p class="navbarelement"><a href="./index.html">Home</a></p>
+      <p class="navbarelement"><a href = "shop.html">Shop</a></p>
+      <p class="navbarelement"><a href="./aboutus.html">About</a></p>
+      <p class="navbarelement"><a href="./contact.html">Contact</a></p>
+      <div class="cartIconContainer">
+        <a href="./cart.html" class="cartIcon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count"></span>
+          <p class="emptyCartMessage2">Your cart is empty.</p>
+          <div class="dropdown-content">
+            <div class="product-Info">
+              <img class="dropImg">
+              <div class="productValues">
+               <a class="nameValues">Product name</a>
+               <span class="QPvalues">(val - product quantity) x ProductPrice</span>
+              </div>
+              <button>X</button>
+            </div>
+            <p class="dropdownSubtotal">Subtotal: (price of all quanitity * products in cart)</p>
+            <div class="dropdownButtons">
+              <a href="cart.html" class="dropdownCartButton">View Cart</a>
+              <a href="checkout.html" class="dropdownCheckOutButton">Check Out</a>
+            </div>
+          </div>
+        </a>
+      </div>
+    </header>
+    <div class="checkout">
+        <h1 class="checkoutHeader">Checkout</h1>
+        <div class="mediaUnder">
+        <div class="mediaBilling">
+        <h2>Billing Details</h2>
+        <p>First Name *</p>
+        <input>
+        <p>Last Name *</p>
+        <input>
+        <p>Street Address *</p>
+        <input placeholder="House number and street name">
+        <br>
+        <br>
+        <input placeholder="Apartment, suite, unit, etc. (optional)"> 
+        <p>City *</p>
+        <input>
+        <br>
+        <br>
+        <label for="state">State *</label><br>
+<select id="state" name="state">
+  <option value="">Select an option...</option>
+  <option value="AL">Alabama</option>
+  <option value="AK">Alaska</option>
+  <option value="AZ">Arizona</option>
+  <option value="AR">Arkansas</option>
+  <option value="CA">California</option>
+  <option value="CO">Colorado</option>
+  <option value="CT">Connecticut</option>
+  <option value="DE">Delaware</option>
+  <option value="FL">Florida</option>
+  <option value="GA">Georgia</option>
+  <option value="HI">Hawaii</option>
+  <option value="ID">Idaho</option>
+  <option value="IL">Illinois</option>
+  <option value="IN">Indiana</option>
+  <option value="IA">Iowa</option>
+  <option value="KS">Kansas</option>
+  <option value="KY">Kentucky</option>
+  <option value="LA">Louisiana</option>
+  <option value="ME">Maine</option>
+  <option value="MD">Maryland</option>
+  <option value="MA">Massachusetts</option>
+  <option value="MI">Michigan</option>
+  <option value="MN">Minnesota</option>
+  <option value="MS">Mississippi</option>
+  <option value="MO">Missouri</option>
+  <option value="MT">Montana</option>
+  <option value="NE">Nebraska</option>
+  <option value="NV">Nevada</option>
+  <option value="NH">New Hampshire</option>
+  <option value="NJ">New Jersey</option>
+  <option value="NM">New Mexico</option>
+  <option value="NY">New York</option>
+  <option value="NC">North Carolina</option>
+  <option value="ND">North Dakota</option>
+  <option value="OH">Ohio</option>
+  <option value="OK">Oklahoma</option>
+  <option value="OR">Oregon</option>
+  <option value="PA">Pennsylvania</option>
+  <option value="RI">Rhode Island</option>
+  <option value="SC">South Carolina</option>
+  <option value="SD">South Dakota</option>
+  <option value="TN">Tennessee</option>
+  <option value="TX">Texas</option>
+  <option value="UT">Utah</option>
+  <option value="VT">Vermont</option>
+  <option value="VA">Virginia</option>
+  <option value="WA">Washington</option>
+  <option value="WV">West Virginia</option>
+  <option value="WI">Wisconsin</option>
+  <option value="WY">Wyoming</option>
+</select>
+        <p>Postal Code *</p>
+        <input>
+        <p>Phone *</p>
+        <input>
+        <p>Email address *</p>
+        <input>
+        <p>Confirm email address *</p>
+        <input>
+        <p>Order notes (optional)</p>
+        <textarea placeholder="Notes about your order"></textarea>
+        </div>
+        <div class="mediaOrder">
+        <h2>Your Order</h2>
+        <div class="orderContainer">
+            <div id="productsContainer" class="productsContainer">
+            </div>
+            <div class="alignRow">
+             <p>Shipping</p>
+             <p>$9.95</p>
+            </div>
+            <div class="alignRow">
+             <h3>Total</h3>
+             <p id="total-price">$xx.xx</p>
+            </div>
+            <div>
+              <div class="credit-card-container">
+                <div class="credit-card-header">
+                  <input type="radio" id="credit-card" name="payment-method" checked>
+                  <label for="credit-card" class="credit-card-label">Credit Card</label>
+              </div>
+                <p>Pay securely using your credit card.</p>
+                <div class="credit-card-input-container">
+                    <input type="text" id="credit-card-number" placeholder="#### #### #### ####">
+                    <div class="expiry-cvv-container">
+                        <input type="text" id="expiry-date" placeholder="MM/YY">
+                        <input type="text" id="cvv" placeholder="CVV">
+                    </div>
+                </div>
+            </div>
+            <p class="personalData">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+                <div class="termsAnd">
+                  <input type="checkbox" id="termsAndConditions" name="termsAndConditions" required>
+                  <label for="termsAndConditions" class="termsAndConditionsText">I have read and agreed to the website's terms and conditions</label>
+              </div>
+            </div>
+            <button type="submit" class="place-order-btn">Place Order</button>
+            </div>
+        </div>
+        </div>
+
+    </div>
+  <div class="emailform">
+    <img src="./airplane.png" alt="Paper Airplane" class="airplane-img">
+    <p class="promo-text">Want to receive discounts, promos, special offers, and 20% off your next purchase?</p>
+    <input type="text" id="email-field" placeholder="Enter your email...">
+    <button class="signup-button">Sign up</button>
+  </div>
+  <div class="body4">
+    <img src="./Logo.jpg" alt="logo" class="logo3">
+    <h1 class="indexh1">Hemp Haul</h1>
+    <p class="centered-text1">Our mission is to serve the highest quality cannabis products online. Shop CBD, CBC, CBG, CBN, Delta-8-THC, Delta-9-THC, Delta-10-THC, HHC, and High-THCa products with confidence. Customer Satisfaction is of the highest importance. Please don’t hesitate to reach out. Thanks for shopping Hemp Haul!</p>
+    <hr class="divider">
+    <p class="right-aligned-text">Disclaimer: HempHaul will not be held responsible for any claims or testimonials regarding medical efficacy of any of our products. The FDA (Food and Drug Administration) has not evaluated any of these statements, nor have the claims been confirmed by FDA-acknowledged research. Neither our staff nor our products are intended to diagnose, cure, prevent, or treat any disease or medical condition. Please consult your physician before including any of our products in your wellness plan.</p>
+    <p class="copyright">Hemp Haul © 2023. All Rights Reserved.</p>
+ </div>
+<script src="main.js"></script>
+<script>
+
+  window.onload = function() {
+    // Get the cart from localStorage
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+    // Get the products container
+    var productsContainer = document.querySelector('#productsContainer');
+  
+    // Total cost for all products (excluding shipping)
+    var totalProductCost = 0;
+  
+    // Loop through all products in the cart
+    cart.forEach(function(product) {
+      // Calculate the product subtotal
+      var productSubtotal = product.price * product.quantity;
+  
+      // Add the product subtotal to the total product cost
+      totalProductCost += productSubtotal;
+  
+      // Create a new div for the product
+      var productDiv = document.createElement('div');
+      productDiv.className = 'alignRow';
+  
+      // Create the product name paragraph
+      var productName = document.createElement('p');
+      productName.innerText = product.name;
+      productDiv.appendChild(productName);
+  
+      // Create the product quantity paragraph
+      var productQuantity = document.createElement('p');
+      productQuantity.innerText = 'x' + product.quantity;
+      productDiv.appendChild(productQuantity);
+  
+      // Create the product price paragraph
+      var productPrice = document.createElement('p');
+      productPrice.innerText = '$' + productSubtotal.toFixed(2);
+      productDiv.appendChild(productPrice);
+  
+      // Append the product div to the products container
+      productsContainer.appendChild(productDiv);
+      updateCartDropdown();
+      updateCartCount();
+    });
+  
+    // Calculate and display the total price
+    var shippingCost = 9.95;
+    var totalPrice = totalProductCost + shippingCost;
+    document.querySelector('#total-price').innerText = '$' + totalPrice.toFixed(2);
+  }
+  
+
+  document.getElementById('credit-card-number').addEventListener('input', function (e) {
+    // Only allow up to 16 digits
+    if(e.target.value.replace(/\s/g, '').length > 16) {
+        e.target.value = e.target.value.slice(0, -1);
+        return;
+    }
+
+    // Remove any character that is not a number
+    e.target.value = e.target.value.replace(/\D/g, '');
+
+    // Add a space after every 4 digits
+    e.target.value = e.target.value.replace(/(\d{4})/g, '$1 ').trim();
+});
+
+
+
+document.getElementById('expiry-date').addEventListener('input', function (e) {
+  // Only allow up to 4 digits
+  if(e.target.value.replace(/\D/g, '').length > 4) {
+      e.target.value = e.target.value.slice(0, -1);
+      return;
+  }
+
+  // Remove any character that is not a number
+  e.target.value = e.target.value.replace(/\D/g, '');
+
+  // Add a slash after the first 2 digits
+  e.target.value = e.target.value.replace(/(\d{2})/, '$1/').trim();
+});
+
+document.getElementById('cvv').addEventListener('input', function (e) {
+  // Only allow up to 3 digits
+  if(e.target.value.length > 3) {
+      e.target.value = e.target.value.slice(0, -1);
+      return;
+  }
+
+  // Remove any character that is not a number
+  e.target.value = e.target.value.replace(/\D/g, '');
+});
+
+// This function creates HTML for each product in the cart
+function createCartItemHTML(product) {
+  return `
+  <div class="product-Info">
+    <div class="product-details">
+    <img src="${product.imgSrc}" alt="${product.name}">
+    <div class="productValues">
+      <a href="#" class="nameValues">${product.name}</a>
+      <span class="QPvalues">${product.quantity} x $${product.price}</span>
+    </div>
+  </div>
+    <button class="remove-item" data-product="${product.name}">X</button>
+  </div>
+  `;
+}
+
+// This function updates the dropdown menu
+function updateCartDropdown() {
+  // get cart from local storage
+  var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // get dropdown content element
+  var dropdownContent = document.querySelector('.dropdown-content');
+
+  // clear previous cart items from the dropdown
+  dropdownContent.innerHTML = '';
+
+  // check if the cart is empty
+  if (cart.length === 0) {
+    // if the cart is empty, show the empty message and return early to exit the function
+    dropdownContent.innerHTML = '<p class="emptyMessage2">Your cart is empty.</p>';
+  } else {
+    // create HTML for each product in the cart
+    cart.forEach(function(product) {
+      var productHTML = createCartItemHTML(product);
+      dropdownContent.innerHTML += productHTML;
+    });
+
+    // calculate and display total price
+    var totalPrice = cart.reduce(function(sum, product) {
+      return sum + product.price * product.quantity;
+    }, 0);
+
+    dropdownContent.innerHTML += `<p class="dropdownSubtotal">Subtotal: $${totalPrice.toFixed(2)}</p>`;
+  
+    var dropdownButtons = document.createElement('div');
+    dropdownButtons.className = 'dropdownButtons';
+    dropdownButtons.innerHTML = `
+      <a href="cart.html" class="dropdownCartButton">View Cart</a>
+      <a href="checkout.html" class="dropdownCheckOutButton">Check Out</a>
+    `;
+    dropdownContent.appendChild(dropdownButtons);
+  }
+}
+
+// This event listener removes items from the cart when the 'X' button is clicked in the dropdown menu
+document.querySelector('.dropdown-content').addEventListener('click', function(event) {
+  if (event.target.classList.contains('remove-item')) {
+    var productName = event.target.dataset.product;
+    removeFromCart(productName);
+  }
+});
+
+// This function removes the product from the cart and updates the dropdown menu
+function removeFromCart(productName) {
+  var cart = JSON.parse(localStorage.getItem('cart')) || [];
+  var updatedCart = cart.filter(function(product) {
+    return product.name !== productName;
+  });
+  localStorage.setItem('cart', JSON.stringify(updatedCart));
+  updateCartDropdown();
+}
+
+// Calls the function to update the dropdown menu after the page loads
+document.addEventListener('DOMContentLoaded', function() {
+  updateCartDropdown();
+});
+
+function updateCartCount() {
+  var cart = JSON.parse(localStorage.getItem('cart')) || [];
+  var totalQuantity = cart.reduce(function(total, item) {
+    return total + item.quantity;
+  }, 0);
+
+  document.querySelector('.cart-count').innerText = totalQuantity;
+}
+
+</script>
+    </body>
+</html>

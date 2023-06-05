@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Hemp Haul CBD Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+   />
+  </head>
+  <header class="header">
+    <img src="./Logo.jpg" class="logo">
+    <p class="navbarelement"><a href = "index.html">Home</a></p>
+    <p class="navbarelement"><a href = "shop.html">Shop</a></p>
+    <p class="navbarelement"><a href="./aboutus.html">About</a></p>
+    <p class="navbarelement"><a href="./contact.html">Contact</a></p>
+    <div class="cartIconContainer">
+      <a href="./cart.html" class="cartIcon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count"></span>
+        <p class="emptyCartMessage2">Your cart is empty.</p>
+        <div class="dropdown-content">
+          <div class="product-Info">
+            <img class="dropImg">
+            <div class="productValues">
+             <a class="nameValues">Product name</a>
+             <span class="QPvalues">(val - product quantity) x ProductPrice</span>
+            </div>
+            <button>X</button>
+          </div>
+          <p class="dropdownSubtotal">Subtotal: (price of all quanitity * products in cart)</p>
+          <div class="dropdownButtons">
+            <a href="cart.html" class="dropdownCartButton">View Cart</a>
+            <a href="checkout.html" class="dropdownCheckOutButton">Check Out</a>
+          </div>
+        </div>
+      </a>
+    </div>
+  </header>
+  <body>
+  <div class="productShop">
+    <div class="zoom-container">
+        <span class="zoom" style="display: inline-block">
+          <img src="./cbdproduct8.png">
+        </span>
+    </div>
+   <div class="productDetails">
+    <p><a href = "./index.html">Home</a> / <a href="./shop.html">Shop</a> / Cloud 9 Mellow Munchies</p>
+    <h1 class="productHeader">Cloud 9 Mellow Munchies</h1>
+    <p class="productPrice">$24.95</p>
+    <p class="productStock">In stock and ready to ship!</p>
+    <div class="productBuy">
+     <form action="/add_to_cart" method="post">
+         <input type="number" id="quantity" class="quantity" name="quantity" min="1" max="100" value="1"><br>
+      </form>
+      <button class="buy-button productButton add-to-cart-btn">Add to cart</button>
+      </div>
+      <p class="productClass">Category: Tinctures</p>
+      <p>Brand: Cloud 9</p>
+    </div>
+  </div>
+  <div class="containerCont">
+    <div class="container">
+     <p id="description" class="interactive-text">Description</p>
+     <p id="reviews" class="interactive-text">Reviews</p>
+    </div>
+   </div>
+  <div id="description-content" class="content">
+    <p class="description-content-p1">Description:</p>
+    <p class="description-content-p">Immerse yourself in an oasis of tranquility with our <b>Cloud 9 Mellow Munchies</b> CBD Edibles. A revolution in wellness snacking, these delicious bites blend exceptional taste with the restorative power of CBD.</p>
+    <p class="description-content-p">Each Mellow Munchie is infused with our premium, organically grown CBD, offering a potent 20mg per piece. Designed for those seeking a gentle, natural path to relaxation and stress relief, these CBD edibles provide a calm that will help you wind down after a long day, or help you focus for the one ahead.</p>
+    <p class="description-content-p">Our Cloud 9 Mellow Munchies come in an assortment of mouthwatering flavors. From the tangy sweetness of citrus burst, to the rich decadence of dark chocolate dream, we've got something for every palate. Made with only natural ingredients, these treats are vegan, gluten-free, and free from artificial sweeteners, ensuring you enjoy only the purest of indulgence.</p>
+    <p class="description-content-p">Packaged in a compact, resealable pouch, Cloud 9 Mellow Munchies are the perfect on-the-go companion for those moments when you need a touch of relaxation. Just one bite, and you'll be floating on Cloud 9.</p>
+    <p class="description-content-p">Experience the harmony of taste and tranquility with our Mellow Munchies CBD Edibles, your passport to the serenity of Cloud 9. Please consume responsibly and keep out of reach of children.</p>
+    <p class="description-content-p last">These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Always consult with your healthcare provider before starting any new wellness product.</p>
+</div>
+<div id="reviews-content" class="content" style="display: none;">
+    <h2 class="reviews-content-h2">Reviews</h2>
+    <p>There are no reviews yet.</p>
+    <div class="loginBox">
+      <p class="loginBox-p">Be the first to review "Cloud 9 Mellow Munchies"</p>
+      <p class="loginBox-p">You must be <a href="./login">logged in</a> to post a review.</p>
+    </div>
+</div>
+  <div class="emailform">
+    <img src="./airplane.png" alt="Paper Airplane" class="airplane-img">
+    <p class="promo-text">Want to receive discounts, promos, special offers, and 20% off your next purchase?</p>
+    <input type="text" id="email-field" placeholder="Enter your email...">
+    <button class="signup-button">Sign up</button>
+  </div>
+  <div class="body4">
+    <img src="./Logo.jpg" alt="logo" class="logo3">
+    <h1 class="indexh1">Hemp Haul</h1>
+    <p class="centered-text1">Our mission is to serve the highest quality cannabis products online. Shop CBD, CBC, CBG, CBN, Delta-8-THC, Delta-9-THC, Delta-10-THC, HHC, and High-THCa products with confidence. Customer Satisfaction is of the highest importance. Please don’t hesitate to reach out. Thanks for shopping Hemp Haul!</p>
+    <hr class="divider">
+    <p class="right-aligned-text">Disclaimer: HempHaul will not be held responsible for any claims or testimonials regarding medical efficacy of any of our products. The FDA (Food and Drug Administration) has not evaluated any of these statements, nor have the claims been confirmed by FDA-acknowledged research. Neither our staff nor our products are intended to diagnose, cure, prevent, or treat any disease or medical condition. Please consult your physician before including any of our products in your wellness plan.</p>
+    <p class="copyright">Hemp Haul © 2023. All Rights Reserved.</p>
+ </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.21/jquery.zoom.min.js"></script>
+<script src="main.js"></script>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    updateCartDropdown();
+    updateCartCount();
+  });
+
+  document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
+    // get product info
+    var productName = document.querySelector('.productHeader').innerText;
+    var productPrice = document.querySelector('.productPrice').innerText;
+    var productImgSrc = document.querySelector('.zoom-container img').src;
+    var productQuantity = document.querySelector('.quantity').value; // get quantity value
+  
+    var productPriceNumber = parseFloat(productPrice.replace('$', ''));  // convert the price to a number
+  
+    var product = {
+      name: productName,
+      price: productPriceNumber,
+      quantity: parseInt(productQuantity),  // set quantity from input
+      imgSrc: productImgSrc
+    };
+  
+    addToCart(product);
+  });
+  
+  
+
+    function addToCart(product) {
+        // get the current cart from localStorage
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+        // check if product already exists in the cart
+        var existingProduct = cart.find(function(item) {
+            return item.name === product.name;
+        });
+    
+        if (existingProduct) {
+            // if product exists, increment quantity
+            existingProduct.quantity += product.quantity;
+        } else {
+            // if product doesn't exist, add it to the cart
+            cart.push(product);
+        }
+    
+        // store the updated cart back into localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        updateCartDropdown();
+    }
+
+    function updateCartCount() {
+      var cart = JSON.parse(localStorage.getItem('cart')) || [];
+      var totalQuantity = cart.reduce(function(total, item) {
+        return total + item.quantity;
+      }, 0);
+    
+      document.querySelector('.cart-count').innerText = totalQuantity;
+    }
+
+
+    function createCartItemHTML(product) {
+      return `
+      <div class="product-Info">
+        <div class="product-details">
+        <img src="${product.imgSrc}" alt="${product.name}">
+        <div class="productValues">
+          <a href="#" class="nameValues">${product.name}</a>
+          <span class="QPvalues">${product.quantity} x $${product.price}</span>
+        </div>
+      </div>
+        <button class="remove-item" data-product="${product.name}">X</button>
+      </div>
+      `;
+    }
+
+    function updateCartDropdown() {
+      // get cart from local storage
+      var cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+      // get dropdown content element
+      var dropdownContent = document.querySelector('.dropdown-content');
+    
+      // clear previous cart items from the dropdown
+      dropdownContent.innerHTML = '';
+    
+      // get the empty message element
+      var emptyMessage = document.querySelector('.emptyCartMessage2');
+    
+      // check if the cart is empty
+      if (cart.length === 0) {
+        // if the cart is empty, show the empty message and return early to exit the function
+        dropdownContent.innerHTML = '<p class="emptyMessage2">Your cart is empty.</p>';
+      } else {
+        // create HTML for each product in the cart
+        cart.forEach(function(product) {
+          var productHTML = createCartItemHTML(product);
+          dropdownContent.innerHTML += productHTML;
+        });
+    
+        // calculate and display total price
+        var totalPrice = cart.reduce(function(sum, product) {
+          return sum + product.price * product.quantity;
+        }, 0);
+    
+        dropdownContent.innerHTML += `<p class="dropdownSubtotal">Subtotal: $${totalPrice.toFixed(2)}</p>`;
+      
+        var dropdownButtons = document.createElement('div');
+        dropdownButtons.className = 'dropdownButtons';
+        dropdownButtons.innerHTML = `
+          <a href="cart.html" class="dropdownCartButton">View Cart</a>
+          <a href="checkout.html" class="dropdownCheckOutButton">Check Out</a>
+        `;
+        dropdownContent.appendChild(dropdownButtons);
+      }
+    }
+    
+    
+    document.querySelector('.dropdown-content').addEventListener('click', function(event) {
+      if (event.target.classList.contains('remove-item')) {
+        var productName = event.target.dataset.product;
+        removeFromCart(productName);
+      }
+    });
+    
+    function removeFromCart(productName) {
+      var cart = JSON.parse(localStorage.getItem('cart')) || [];
+      var updatedCart = cart.filter(function(product) {
+        return product.name !== productName;
+      });
+      localStorage.setItem('cart', JSON.stringify(updatedCart));
+      updateCartDropdown();
+      updateCartCount();
+    }
+
+    
+</script>
+</body>
+</html>

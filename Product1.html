@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Hemp Haul CBD Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link 
+   rel="stylesheet" 
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+   integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+   crossorigin="anonymous" 
+   referrerpolicy="no-referrer" 
+  />
+  </head>
+  <header class="header">
+    <img src="./Logo.jpg" class="logo">
+    <p class="navbarelement"><a href = "index.html">Home</a></p>
+    <p class="navbarelement"><a href = "shop.html">Shop</a></p>
+    <p class="navbarelement"><a href="./aboutus.html">About</a></p>
+    <p class="navbarelement"><a href="./contact.html">Contact</a></p>
+    <div class="cartIconContainer">
+      <a href="./cart.html" class="cartIcon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count"></span>
+        <p class="emptyCartMessage2">Your cart is empty.</p>
+        <div class="dropdown-content">
+          <div class="product-Info">
+            <img class="dropImg">
+            <div class="productValues">
+             <a class="nameValues">Product name</a>
+             <span class="QPvalues">(val - product quantity) x ProductPrice</span>
+            </div>
+            <button>X</button>
+          </div>
+          <p class="dropdownSubtotal">Subtotal: (price of all quanitity * products in cart)</p>
+          <div class="dropdownButtons">
+            <a href="cart.html" class="dropdownCartButton">View Cart</a>
+            <a href="checkout.html" class="dropdownCheckOutButton">Check Out</a>
+          </div>
+        </div>
+      </a>
+    </div>
+  </header>
+  <body>
+  <div class="productShop">
+    <div class="zoom-container">
+        <span class="zoom" style="display: inline-block">
+          <img src="./cbdproduct1.png">
+        </span>
+    </div>
+   <div class="productDetails">
+    <p><a href = "./index.html">Home</a> / <a href="./shop.html">Shop</a> / DeltaDaze Elixir</p>
+    <h1 class="productHeader">DeltaDaze Elixir</h1>
+    <p class="productPrice">$34.95</p>
+    <p class="productStock">In stock and ready to ship!</p>
+    <div class="productBuy">
+     <form action="/add_to_cart" method="post">
+      <input type="number" id="quantity" class="quantity" name="quantity" min="1" max="100" value="1"><br>
+     </form>
+     <button class="buy-button productButton add-to-cart-btn">Add to cart</button>
+    </div>
+      <p class="productClass">Category: Tinctures</p>
+      <p>Brand: DeltaDaze</p>
+    </div>
+  </div>
+  <div class="containerCont">
+    <div class="container">
+     <p id="description" class="interactive-text">Description</p>
+     <p id="reviews" class="interactive-text">Reviews</p>
+    </div>
+   </div>
+  <div id="description-content" class="content">
+    <p class="description-content-p1">Description:</p>
+    <p class="description-content-p">Introducing the <b>DeltaDaze Elixer</b>, an innovative Delta-8 THC tincture crafted to provide a soothing and enjoyable wellness experience. This premium product is created from carefully selected hemp plants grown in eco-friendly conditions, ensuring that each drop you consume is packed with nature's finest.</p>
+    <p class="description-content-p">Each 30ml bottle of DeltaDaze Elixer contains a balanced 1000mg of Delta-8 THC, making it perfect for both novices and experienced users alike. It promises a mild psychoactive effect that induces a clear-headed, semi-sedative calm rather than the more intense high associated with Delta-9 THC. It's the ideal product for anyone looking to unwind after a long day or seeking assistance with sleep.</p>
+    <p class="description-content-p">DeltaDaze Elixer features a subtle, all-natural flavor profile derived from organic terpenes. This earthy yet pleasing taste adds an enjoyable layer to the experience, making each drop as pleasant to the palate as it is beneficial to the body and mind.
+
+    </p>
+    <p class="description-content-p">The practical dropper included ensures accurate and efficient dosing, allowing you to customize your Delta-8 THC intake to your preference and needs. DeltaDaze is dedicated to quality and safety, and this product is third-party lab tested for potency and purity.</p>
+    <p class="description-content-p">On top of its impressive features, DeltaDaze Elixer is also vegan-friendly, gluten-free, and non-GMO, making it a reliable choice for health-conscious consumers. It does not contain any additives, preservatives, or artificial colors, preserving its purity and effectiveness.</p>
+    <p class="description-content-p">Experience a new level of tranquility and relaxation with DeltaDaze Elixer, the high-quality Delta-8 THC tincture you can trust. Experience the daze, the DeltaDaze way!</p>
+    <p class="description-content-p last"><b>Note:</b> Delta-8 THC may affect individuals differently and can cause drowsiness. Please use responsibly and consult your doctor before use. Not for use by individuals under the age of 21. Keep out of the reach of children.</p>
+</div>
+<div id="reviews-content" class="content" style="display: none;">
+    <h2 class="reviews-content-h2">Reviews</h2>
+    <p>There are no reviews yet.</p>
+    <div class="loginBox">
+      <p class="loginBox-p">Be the first to review "DeltaDaze Elixir."</p>
+      <p class="loginBox-p">You must be <a href="./login">logged in</a> to post a review.</p>
+    </div>
+</div>
+  <div class="emailform">
+    <img src="./airplane.png" alt="Paper Airplane" class="airplane-img">
+    <p class="promo-text">Want to receive discounts, promos, special offers, and 20% off your next purchase?</p>
+    <input type="text" id="email-field" placeholder="Enter your email...">
+    <button class="signup-button">Sign up</button>
+  </div>
+  <div class="body4">
+    <img src="./Logo.jpg" alt="logo" class="logo3">
+    <h1 class="indexh1">Hemp Haul</h1>
+    <p class="centered-text1">Our mission is to serve the highest quality cannabis products online. Shop CBD, CBC, CBG, CBN, Delta-8-THC, Delta-9-THC, Delta-10-THC, HHC, and High-THCa products with confidence. Customer Satisfaction is of the highest importance. Please don’t hesitate to reach out. Thanks for shopping Hemp Haul!</p>
+    <hr class="divider">
+    <p class="right-aligned-text">Disclaimer: HempHaul will not be held responsible for any claims or testimonials regarding medical efficacy of any of our products. The FDA (Food and Drug Administration) has not evaluated any of these statements, nor have the claims been confirmed by FDA-acknowledged research. Neither our staff nor our products are intended to diagnose, cure, prevent, or treat any disease or medical condition. Please consult your physician before including any of our products in your wellness plan.</p>
+    <p class="copyright">Hemp Haul © 2023. All Rights Reserved.</p>
+ </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.21/jquery.zoom.min.js"></script>
+<script src="main.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      updateCartDropdown();
+      updateCartCount();
+    });
+  
+    document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
+      // get product info
+      var productName = document.querySelector('.productHeader').innerText;
+      var productPrice = document.querySelector('.productPrice').innerText;
+      var productImgSrc = document.querySelector('.zoom-container img').src;
+      var productQuantity = document.querySelector('.quantity').value; // get quantity value
+    
+      var productPriceNumber = parseFloat(productPrice.replace('$', ''));  // convert the price to a number
+    
+      var product = {
+        name: productName,
+        price: productPriceNumber,
+        quantity: parseInt(productQuantity),  // set quantity from input
+        imgSrc: productImgSrc
+      };
+    
+      addToCart(product);
+    });
+    
+    
+  
+      function addToCart(product) {
+          // get the current cart from localStorage
+          var cart = JSON.parse(localStorage.getItem('cart')) || [];
+      
+          // check if product already exists in the cart
+          var existingProduct = cart.find(function(item) {
+              return item.name === product.name;
+          });
+      
+          if (existingProduct) {
+              // if product exists, increment quantity
+              existingProduct.quantity += product.quantity;
+          } else {
+              // if product doesn't exist, add it to the cart
+              cart.push(product);
+          }
+      
+          // store the updated cart back into localStorage
+          localStorage.setItem('cart', JSON.stringify(cart));
+          updateCartCount();
+          updateCartDropdown();
+      }
+  
+      function updateCartCount() {
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+        var totalQuantity = cart.reduce(function(total, item) {
+          return total + item.quantity;
+        }, 0);
+      
+        document.querySelector('.cart-count').innerText = totalQuantity;
+      }
+  
+  
+      function createCartItemHTML(product) {
+        return `
+        <div class="product-Info">
+          <div class="product-details">
+          <img src="${product.imgSrc}" alt="${product.name}">
+          <div class="productValues">
+            <a href="#" class="nameValues">${product.name}</a>
+            <span class="QPvalues">${product.quantity} x $${product.price}</span>
+          </div>
+        </div>
+          <button class="remove-item" data-product="${product.name}">X</button>
+        </div>
+        `;
+      }
+  
+      function updateCartDropdown() {
+        // get cart from local storage
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+      
+        // get dropdown content element
+        var dropdownContent = document.querySelector('.dropdown-content');
+      
+        // clear previous cart items from the dropdown
+        dropdownContent.innerHTML = '';
+      
+        // get the empty message element
+        var emptyMessage = document.querySelector('.emptyCartMessage2');
+      
+        // check if the cart is empty
+        if (cart.length === 0) {
+          // if the cart is empty, show the empty message and return early to exit the function
+          dropdownContent.innerHTML = '<p class="emptyMessage2">Your cart is empty.</p>';
+        } else {
+          // create HTML for each product in the cart
+          cart.forEach(function(product) {
+            var productHTML = createCartItemHTML(product);
+            dropdownContent.innerHTML += productHTML;
+          });
+      
+          // calculate and display total price
+          var totalPrice = cart.reduce(function(sum, product) {
+            return sum + product.price * product.quantity;
+          }, 0);
+      
+          dropdownContent.innerHTML += `<p class="dropdownSubtotal">Subtotal: $${totalPrice.toFixed(2)}</p>`;
+        
+          var dropdownButtons = document.createElement('div');
+          dropdownButtons.className = 'dropdownButtons';
+          dropdownButtons.innerHTML = `
+            <a href="cart.html" class="dropdownCartButton">View Cart</a>
+            <a href="checkout.html" class="dropdownCheckOutButton">Check Out</a>
+          `;
+          dropdownContent.appendChild(dropdownButtons);
+        }
+      }
+      
+      
+      document.querySelector('.dropdown-content').addEventListener('click', function(event) {
+        if (event.target.classList.contains('remove-item')) {
+          var productName = event.target.dataset.product;
+          removeFromCart(productName);
+        }
+      });
+      
+      function removeFromCart(productName) {
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+        var updatedCart = cart.filter(function(product) {
+          return product.name !== productName;
+        });
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+        updateCartDropdown();
+        updateCartCount();
+      }
+  
+</script>
+</body>
+</html>
