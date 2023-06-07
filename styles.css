@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
   background-color: rgb(68, 99, 55);
   color: rgb(251, 220, 165);
   width: 100%;
+  min-height: 15vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -28,6 +31,11 @@ body {
 .cartIcon {
   text-decoration: none;
   color: inherit;
+}
+
+.cartIcon i {
+  position: relative;
+  padding-top: 6px;
 }
 
 .cartIcon:hover {
@@ -48,8 +56,8 @@ body {
 
 .cart-count {
   position: absolute; 
-  top: 10px; 
-  right: 10px; 
+  bottom: 14px; 
+  left: 10px; 
   background-color: orange; 
   color: white; 
   border-radius: 50%; 
@@ -87,20 +95,21 @@ body {
 
 
 .body1 {
-  height: 80vw;
-  padding: 2rem 0;
+  position: relative;
+  min-height: 70vh;
   width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  line-height: 1;
+  text-align: center;
 }
 
-.overlay {
-  background: linear-gradient(to right, grey(0,0,0,.5), grey(0,0,0,.3));
-}
+
   
   
-  .body1:before {
+ .body1:before {
     content: "";
     position: absolute;
     top: 0;
@@ -115,25 +124,24 @@ body {
     background-size: cover;
     /* This z-index ensures the overlay-text appears over the image */
     z-index: -1;
-}
+} 
 
 
 .overlay-text {
   text-align: center; 
-  position: absolute;
-  top: 20%;
-  left: 50%;
   width: 100%;
-  transform: translate(-50%, -50%);
+  height: auto;
   font-family: Cambria;
-  margin-top: 19vh;
-  padding-top: 14vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .shop-button {
   display: inline-block;
   padding: 2.1vh 4vw;
-  font-size: 1rem;
+  font-size: .9rem;
   background-color: rgb(68, 99, 55); 
   color: white; 
   text-decoration: none;
@@ -148,11 +156,9 @@ body {
 }
 
 .overlayHeader {
-  font-size: 3.5rem;
+  font-size: 2.4rem;
   font-family: Cambria;
   color: black;
-  padding-left: 10vw;
-
 }
 
 .Haul {
@@ -162,20 +168,20 @@ body {
 }
 
 .overlayP {
-  font-size: 1rem;
-  width: 50%;
+  font-size: .9rem;
+  width: 80%;
   font-family: Cambria;
-  margin: 0 auto;
-  margin-top: -30px;
-  padding-bottom: 1vh;
   color: black;
   opacity: 95%;
+  margin-top: 10px;
 }
 
 .body2 {
   background-color: rgb(251, 220, 165);
   height: auto;
   display: flex;
+  justify-content: center;
+  line-height: 1;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -190,8 +196,7 @@ body {
 }
 
 .body2text {
-  margin-top: 0;
-  margin-bottom: 0;
+  line-height: 1.2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -203,21 +208,21 @@ body {
 .ptext {
   width: 80%;
   padding-bottom: 10vw;
-  margin-top: -10px;
   font-size: 1.2rem;
 }
 
 .body2header {
   margin-top: 6px;
-  font-size: 50px;
+  font-size: 2.4rem;
   font-family: Cambria;
+  padding-bottom: 3vh;
 }
 
 .body2sub {
-  font-size: 35px;
-  width: 90%;
-  margin-top: -13px;
+  font-size: 1.6rem;
+  width: 85%;
   font-family: Cambria;
+  padding-bottom: 3vh;
 }
 
 .body3 {
@@ -238,9 +243,10 @@ body {
 }
 
 .hempleaf2 {
+  min-width: 90px;
   width: 15vw;
   height: auto;
-  margin-top: 6vh;
+  margin-top: 4vh;
 }
 
 .body3header {
@@ -274,6 +280,7 @@ body {
 
 .productTitle {
   font-size: 1.1rem;
+  color: black;
 }
 
 .productPrice1 {
@@ -379,7 +386,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  line-height: 1;
   text-align: center;
 }
 
@@ -390,23 +396,26 @@ body {
   width: 100%;
   height: 100%;
   background: url('./youngpeople.png') no-repeat center center;
-  background-size: cover;
-  opacity: 0.8;
+  background-size: auto;
+  /* use cover value in media query to fix large-width issue; */
+
   background-attachment: fixed;
-  background-position: center;
+  /* background-position: center; */
   background-repeat: no-repeat;
 }
 
 
 .overlay-text2 {
   color: white;
-  font-family: Helvetica;
-  line-height: 1;
+  font-family: Cambria;
+  line-height: 1.1;
   z-index: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -415,6 +424,7 @@ body {
   color: white;
   width: 100%;
   text-align: center;
+  padding-bottom: 4.5vh;
 }
 
 .overlay-text2 p {
@@ -1172,6 +1182,10 @@ color: inherit;
   position: relative;
   height: 35vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -1190,28 +1204,26 @@ background-repeat: no-repeat;
 
 .overlayText3, .overlayText4 {
   position: absolute;
-  top: 0%; /* centers the text vertically */
-  left: 4%; /* centers the text horizontally */
-  width: 95%; /* width of the text overlay */
-  height: 30%; /* height of the text overlay */
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.1;
   color: white;
-  font-size: 4vw;
   font-family: Cambria;
+  width: 100%;
+  height: 100%;
 }
 
-.overlayText3 h1, p {
-  padding-top: 1vh;
-}
 
 .overlayText3 h1 {
-  font-size: 3.8rem;
+  font-size: 3.3rem;
+  padding-bottom: 4.5vh;
 }
 
 .overlayText3 p {
   font-size: 1rem;
-  margin-top: -1.3rem;
-  padding-right: 9vw;
   font-weight: bold;
   color: rgb(128, 106, 36);
 }
@@ -1330,14 +1342,12 @@ background-repeat: no-repeat;
 }
 
 .overlayText4 h1 {
-  margin-top: 6.5vh;
-  font-size: 3.5rem;
+  font-size: 3.1rem;
+  padding-bottom: 3.7vh;
 }
 
 .overlayText4 p {
   font-size: 1rem;
-  margin-top: -1.3rem;
-  padding-right: 9vw;
   font-weight: bold;
   color: rgb(128, 106, 36);
 }
