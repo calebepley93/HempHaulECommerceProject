@@ -1,8 +1,12 @@
+* {
+  box-sizing: border-box;
+}
 
 body {
   display: flex;
   flex-direction: column;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -369,9 +373,14 @@ body {
 
  .shopPhoto {
   position: relative;
-  height: 38vh;
+  min-height: 38vh;
   width: 100%;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  text-align: center;
 }
 
 .opaque-background {
@@ -386,39 +395,35 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
- 
 }
 
 
 .overlay-text2 {
-  position: absolute;
-  top: 0%; /* centers the text vertically */
-  left: 4%; /* centers the text horizontally */
-  width: 100%; /* width of the text overlay */
-  height: 30%; /* height of the text overlay */
-  text-align: center;
   color: white;
-  font-size: 4vw;
   font-family: Helvetica;
+  line-height: 1;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+
 .overlay-text2 h1 {
+  font-size: 2.2rem;
   color: white;
-  padding-top: 1vh;
-}
-
-
-.overlay-text2 h1 {
-  font-size: 2.8rem;
+  width: 100%;
+  text-align: center;
 }
 
 .overlay-text2 p {
   font-size: .9rem;
-  margin-top: -1.4rem;
-  padding-right: 9vw;
   font-weight: bold;
   color: rgb(128, 106, 36);
+  margin-top: -1.3vh;
+  align-self: center;
+  width: 100%;
 }
 
 .overlay-text2 a {
