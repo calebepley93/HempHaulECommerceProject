@@ -14,34 +14,54 @@
   />
   </head>
   <header class="header">
+    <div class="iconsearch">
     <img src="./Logo.jpg" class="logo">
-    <p class="navbarelement"><a href = "index.html">Home</a></p>
-    <p class="navbarelement"><a href = "shop.html">Shop</a></p>
-    <p class="navbarelement"><a href="./aboutus.html">About</a></p>
-    <p class="navbarelement"><a href="./contact.html">Contact</a></p>
-    <div class="cartIconContainer">
-      <a href="./cart.html" class="cartIcon">
-        <i class="fas fa-shopping-cart"><span class="cart-count"></span></i>
-        <p class="emptyCartMessage2">Your cart is empty.</p>
-        <div class="dropdown-content">
-          <div class="product-Info">
-            <img class="dropImg">
-            <div class="productValues">
-             <a class="nameValues">Product name</a>
-             <span class="QPvalues">(val - product quantity) x ProductPrice</span>
+    <i class="fas fa-search" id="search-icon"></i>
+    <div id="search-overlay" class="search-overlay">
+        <input type="text" class="search-input" placeholder="Search..." />
+        <div class="search-closebtn">&times;</div>
+    </div>
+    </div>
+    <div class="cartHamburger"></div>
+        <div class="cartIconContainer">
+         <a href="./cart.html" class="cartIcon">
+            <i class="fas fa-shopping-cart"><span class="cart-count"></span></i>
+            <p class="emptyCartMessage2">Your cart is empty.</p>
+            <div class="dropdown-content">
+              <div class="product-Info">
+                <img class="dropImg">
+                <div class="productValues">
+                 <a class="nameValues">Product name</a>
+                 <span class="QPvalues">(val - product quantity) x ProductPrice</span>
+                </div>
+                <button>X</button>
+              </div>
+              <p class="dropdownSubtotal">Subtotal: (price of all quanitity * products in cart)</p>
+              <div class="dropdownButtons">
+                <a href="cart.html" class="dropdownCartButton">View Cart</a>
+                <a href="checkout.html" class="dropdownCheckOutButton">Check Out</a>
             </div>
-            <button>X</button>
-          </div>
-          <p class="dropdownSubtotal">Subtotal: (price of all quanitity * products in cart)</p>
-          <div class="dropdownButtons">
-            <a href="cart.html" class="dropdownCartButton">View Cart</a>
-            <a href="checkout.html" class="dropdownCheckOutButton">Check Out</a>
-          </div>
         </div>
       </a>
     </div>
+    </div>
+    <div class="hamburger-menu" id="hamburger-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    </div>
   </header>
   <body>
+    <div id="overlay" class="overlay">
+      <div class="closebtn">&times;</div>
+      <ul class="overlay-content">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./aboutus.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
   <div class="productShop">
     <div class="zoom-container">
         <span class="zoom" style="display: inline-block">
@@ -92,16 +112,25 @@
       <p class="loginBox-p">You must be <a href="./login">logged in</a> to post a review.</p>
     </div>
 </div>
-  <div class="emailform">
+<div class="emailform">
+  <div class="planetext">
     <img src="./airplane.png" alt="Paper Airplane" class="airplane-img">
     <p class="promo-text">Want to receive discounts, promos, special offers, and 20% off your next purchase?</p>
+  </div>
+  <div class="formSign">
     <input type="text" id="email-field" placeholder="Enter your email...">
     <button class="signup-button">Sign up</button>
   </div>
+</div>
   <div class="body4">
     <img src="./Logo.jpg" alt="logo" class="logo3">
     <h1 class="indexh1">Hemp Haul</h1>
     <p class="centered-text1">Our mission is to serve the highest quality cannabis products online. Shop CBD, CBC, CBG, CBN, Delta-8-THC, Delta-9-THC, Delta-10-THC, HHC, and High-THCa products with confidence. Customer Satisfaction is of the highest importance. Please don’t hesitate to reach out. Thanks for shopping Hemp Haul!</p>
+    <div class="socialIcons">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter"></i>
+     </div>
     <hr class="divider">
     <p class="right-aligned-text">Disclaimer: HempHaul will not be held responsible for any claims or testimonials regarding medical efficacy of any of our products. The FDA (Food and Drug Administration) has not evaluated any of these statements, nor have the claims been confirmed by FDA-acknowledged research. Neither our staff nor our products are intended to diagnose, cure, prevent, or treat any disease or medical condition. Please consult your physician before including any of our products in your wellness plan.</p>
     <p class="copyright">Hemp Haul © 2023. All Rights Reserved.</p>
@@ -110,6 +139,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.21/jquery.zoom.min.js"></script>
 <script src="main.js"></script>
 <script>
+
+
+  document.getElementById('hamburger-menu').addEventListener('click', function() {
+    document.getElementById('overlay').style.width = '100%';
+});
+
+document.querySelector('.overlay').addEventListener('click', function() {
+    document.getElementById('overlay').style.width = '0%';
+});
+
+let searchIcon = document.getElementById("search-icon");
+let searchOverlay = document.getElementById("search-overlay");
+let searchInput = document.querySelector('.search-input');
+let closeBtn = document.querySelector('.search-closebtn');
+
+searchIcon.addEventListener("click", function() {
+    if(searchOverlay.style.visibility == "hidden" || searchOverlay.style.visibility == ""){
+        searchOverlay.style.visibility = "visible";
+        searchOverlay.style.height = "20vw"; // this is added
+        searchInput.value = ''; // reset input value
+        searchInput.focus(); // focus on input field
+    } else {
+        searchOverlay.style.visibility = "hidden";
+        searchOverlay.style.height = "0"; // this is added
+    }
+});
+
+closeBtn.addEventListener('click', function() {
+    searchOverlay.style.visibility = "hidden";
+    searchOverlay.style.height = "0"; // this is added
+});
+
+
   document.addEventListener('DOMContentLoaded', function() {
     updateCartDropdown();
     updateCartCount();
