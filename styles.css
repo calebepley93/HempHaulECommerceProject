@@ -387,6 +387,10 @@ body {
   font-family: Cambria;
 }
 
+#orderInform div, p, a {
+  margin-top: 20px;
+}
+
 .hempleaf2 {
   min-width: 90px;
   width: 15vw;
@@ -827,9 +831,11 @@ body {
 }
 
 .cartTitle {
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: none;
   font-family: Cambria;
+  margin-bottom: 3vh;
+  padding-top: 5vh;
 }
 
 .productDetails {
@@ -1049,23 +1055,28 @@ color: inherit;
   height: 20%;
 }
 
+#total-price {
+  margin-top: 4px;
+}
+
 .product-subtotal {
   padding-left: 0px;
 }
 
 #return-to-shop {
-  width: 16%;
-  border-radius: 20px;
+  width: 40%;
+  border-radius: 40px;
   background-color: rgb(45, 75, 40);
   color: white;
   font-family: Cambria;
   font-size: .8rem;
   margin-left: 6.5vw;
   margin-bottom: 6vh;
-  margin-top: 2vh;
+  margin-top: 4vh;
   padding: 0.7rem .8rem;
   border: 1px;
   text-decoration: none;
+  text-align: center;
   display: inline-block;
 }
 
@@ -1075,12 +1086,12 @@ color: inherit;
 }
 
 #update-cart-btn {
-  width: 20%;
+  width: 40%;
   border-radius: 20px;
   border: 1px solid grey;
   margin-top: 3.5vh;
   margin-bottom: 3.5vh;
-  margin-left: 73vw;
+  margin-left: 5vh;
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: Cambria;
@@ -1090,11 +1101,10 @@ color: inherit;
 
 #orderInform {
   background-color: rgb(234, 229, 173);
-  margin: 0 auto;
-  margin-bottom: 6vh;
-  width: 80%;
+  width: 100%;
   font-family: Cambria;
   padding: 2rem;
+  margin-bottom: 6vh;
 }
 
 .subtotalSpan {
@@ -1138,7 +1148,9 @@ color: inherit;
 
 .checkoutHeader {
   font-size: 50px;
-  margin-left: -34px;
+  margin-left: -7vw;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
 }
 
 .checkout {
@@ -1153,16 +1165,22 @@ color: inherit;
 
 .checkout input {
   width: 90%;
-  height: 5vh;
+  height: 7vh;
   background-color:rgb(234, 229, 173);
   border-radius: 6px;
-  margin-top: -10px;
+  margin-top: 1vh;
 }
 
 .checkout textarea {
   width: 90%;
   height: 20vh;
   border-radius: 6px;
+  margin-top: 2vh;
+}
+
+.mediaOrder h2 {
+  padding-top: 3vh;
+  padding-bottom: 4vh;
 }
 
 .checkout select {
@@ -1173,9 +1191,9 @@ color: inherit;
 }
 
 .orderContainer {
-  width: 90%;
+  width: 97%;
   background-color: rgb(251, 220, 165);
-  border-radius: 6px;
+  border-radius: 6x;
 }
 
 .alignRow {
@@ -1184,6 +1202,17 @@ color: inherit;
   width: 90%;
   justify-content: space-between;
   margin-left: 10px;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+
+.alignRow2 {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 #productsContainer {
@@ -1194,7 +1223,7 @@ color: inherit;
 }
 
 .credit-card-container {
-  width: 60vw;
+  width: 97%;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -1225,24 +1254,26 @@ color: inherit;
 }
 
 .credit-card-input-container input {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
+ margin-bottom: 10px;
+  padding: 10px; 
+  border: 1px solid grey;
 }
 
 .expiry-cvv-container {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .expiry-cvv-container input {
   width: 45%;
+  margin-right: 3px;
 }
 
 .personalData {
-  font-size: .75rem;
+  font-size: 1rem;
   width: 80%;
   padding-left: 9vw;
+  margin-bottom: 3vh;
 }
 
 .termsAnd {
@@ -1267,17 +1298,17 @@ color: inherit;
 .place-order-btn {
   background-color: rgb(45, 75, 40); 
   color: white;
-  width: 40%;
+  width: 80%;
   border-radius: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-bottom: 4vh;
+  margin-left: 4.4vh;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
   border: none;
-  margin-left: 23vw;
-  margin-bottom: 6vh;
 }
 
 .dropdown-content {
@@ -1394,7 +1425,7 @@ color: inherit;
 
 .aboutUsimg, .contactImg {
   position: relative;
-  height: 35vh;
+  height: 25vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1433,7 +1464,6 @@ background-repeat: no-repeat;
 
 .overlayText3 h1 {
   font-size: 3.3rem;
-  padding-bottom: 4.5vh;
 }
 
 .overlayText3 p {
@@ -1512,6 +1542,10 @@ background-repeat: no-repeat;
   margin-left: 9vw;
 }
 
+.carousel-item h2, h3, p {
+  margin-top: 3vh;
+}
+
 .carousel-item.active {
   display: block;
 }
@@ -1557,7 +1591,6 @@ background-repeat: no-repeat;
 
 .overlayText4 h1 {
   font-size: 3.1rem;
-  padding-bottom: 3.7vh;
 }
 
 .overlayText4 p {
@@ -1586,6 +1619,7 @@ text-decoration: none;
 .contQues {
   width: 75%;
   margin-left: 11vw;
+  line-height: 1.3;
 }
 
 .phone {
@@ -1597,8 +1631,7 @@ text-decoration: none;
 .phone h2 {
   font-size: 2rem;
   margin-left: 3vw;
-  margin-top: -.5px;
-  padding-top: 14px;
+  padding-top: 2vh;
 }
 
 i.fa-circle {
@@ -1619,8 +1652,7 @@ span.fa-stack.fa-lg {
   color: rgb(45, 75, 40);
   font-size: 1.5rem;
   margin-left: 15vw;
-  margin-top: -3px;
-  padding-top: 5px;
+  margin-bottom: 3vh;
 }
 
 .contactField {
@@ -1629,7 +1661,12 @@ span.fa-stack.fa-lg {
   width: 83%;
   margin-left: 7vw;
   padding-left: 11px;
-  padding-right: 10px;
+  padding-right: 10px; 
+  margin-bottom: 6vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -1640,31 +1677,37 @@ span.fa-stack.fa-lg {
   height: 5vh;
   border-radius: 3px;
   border: .5px solid grey;
-  margin-top: -10px;
+  margin-top: 1vh;
 }
 
 .emailForm {
-  display: inline-block;
-  margin-left: 4.5vw;
+  margin-left: 7vw;
+  align-self:baseline;
 }
 
 .sendMessage {
   display: flex;
-  margin-left: 21px;
+  margin-left: 9vw;
   padding-top: 30px;
 }
 
 .sendMessage h2 {
   font-size: 1.8rem;
-  margin-left: 3vw;
+  margin-left: 5vw;
   margin-top: -.5px;
-  padding-top: 14px;
+}
+
+.names > div {
+  width: 87%;  /* adjust the percentage as needed */
+  margin-left: 4.5vw;
 }
 
 .names {
   display: flex;
-  padding: 0 1.5rem;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .nameinput {
@@ -1672,11 +1715,12 @@ span.fa-stack.fa-lg {
   border-radius: 3px;
   border: .5px solid grey;
   margin-top: -10px;
-  justify-content: space-between;
+  width: 100%;
 }
 
 .names2 {
   margin-bottom: 2vh;
+  width: 100%;
 }
 
 #help {
@@ -1685,16 +1729,18 @@ span.fa-stack.fa-lg {
   height: 5vh;
   border-radius: 3px;
   border: .5px solid grey;
-  margin-top: -10px;
 }
 
 .helpText {
   margin-left: 4.5vw;
-  display: inline-block;
+  align-self:baseline;
+  margin-bottom: 1vh;
 }
 
 .message {
   margin-left: 4.5vw;
+  margin-bottom: 1vh;
+  align-self: baseline;
 }
 
 .messageText {
@@ -1703,12 +1749,11 @@ span.fa-stack.fa-lg {
   height: 5vh;
   border-radius: 3px;
   border: .5px solid grey;
-  margin-top: -10px;
   height: 15vh;
 }
 
 #myFile {
-  margin-left: 4.5vw;
+  margin-left: 8vw;
   margin-top: 15px;
 }
 
@@ -1717,7 +1762,7 @@ span.fa-stack.fa-lg {
   margin-bottom: 6vh;
   margin-left: 4.5vw;
   color: white;
-  width: 15vw;
+  width: 50vw;
   height: 6vh;
   background-color: rgb(45, 75, 40);
   border: none;
@@ -1840,7 +1885,7 @@ span.fa-stack.fa-lg {
   }
 
   .mediaOrder {
-    width: 45%;
+    width: 100%;
   }
 
   .credit-card-container {
@@ -2111,7 +2156,7 @@ span.fa-stack.fa-lg {
   }
 
   .sendMessage span {
-    padding-left: 4vw;
+
     padding-top: 2vh;
   }
 
