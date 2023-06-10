@@ -1431,8 +1431,21 @@ color: inherit;
   align-items: center;
 }
 
+.contactImg::before {
+  content: "";
+  position: fixed; /* or absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it sits below content */
+  background: url('./cityskyline.png') no-repeat center center;
+  background-size: cover;
+}
 
-.opaque-background2 {
+
+
+/* .opaque-background2 {
 position: absolute;
 top: 0;
 left: 0;
@@ -1443,6 +1456,18 @@ background-size: cover;
 background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
+} */
+
+.aboutUsimg::before {
+  content: "";
+  position: fixed; /* or absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it sits below content */
+  background: url('./cityskyline.png') no-repeat center center;
+  background-size: cover;
 }
 
 .overlayText3, .overlayText4 {
@@ -1574,7 +1599,7 @@ background-repeat: no-repeat;
 
 /* start CSS for contact page */
 
-.opaque-background3 {
+/* .opaque-background3 {
  position: absolute;
  top: 0;
  left: 0;
@@ -1585,7 +1610,7 @@ background-repeat: no-repeat;
  background-attachment: fixed;
  background-position: center;
  background-repeat: no-repeat;
-}
+} */
 
 .overlayText4 h1 {
   font-size: 3.1rem;
@@ -1612,6 +1637,7 @@ text-decoration: none;
   width: 100%;
   font-family: Cambria;
   margin-bottom: 7vh;
+  background-color: white;
 }
 
 .contQues {
@@ -1769,6 +1795,10 @@ span.fa-stack.fa-lg {
 
 .contactSubmit:hover {
   cursor: pointer;
+}
+
+.aboutSection {
+  background-color: white;
 }
 
 @media screen and (min-width: 800px) {
@@ -2068,6 +2098,8 @@ span.fa-stack.fa-lg {
   display: flex;
   flex-direction: row;
   padding-right: 4vw;
+  background-color: white;
+  z-index: 1;
  }
 
  .carousel-item {
