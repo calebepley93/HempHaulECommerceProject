@@ -255,14 +255,13 @@ body {
   
  .body1:before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     opacity: 90%;
     width: 100%;
     background-image: url("./hiker2.png");
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -376,6 +375,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 }
 
 .product-container {
