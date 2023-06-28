@@ -12,6 +12,10 @@
     crossorigin="anonymous" 
     referrerpolicy="no-referrer" 
    />
+   <link rel="stylesheet" href="./Sandbox/largeheader.css">
+   <link rel ="stylesheet" href = "./Sandbox/herosection.css">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="./Sandbox/emailform.css">
   </head>
   <body>
     <div id="overlay" class="overlay">
@@ -23,9 +27,34 @@
           <li><a href="./contact.html">Contact</a></li>
       </ul>
   </div>
+  <header class="large-header">
+    <div class="header-topline">
+        <div class="follow-us">
+        <span class="follow-text">Follow us:</span>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+        <div class="logo-img-cont">
+            <img src="./Logo.webp" alt="hemphaullogo">
+        </div>
+        <div class="right-content">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+    <nav class="header-lowline">
+        <ul>
+            <li class="nav-list"><a href="./index.html">Home</a></li>
+            <li class="nav-list"><a href="./shop.html">Shop</a></li>
+            <li class="nav-list"><a href="./about.html">About</a></li>
+            <li class="nav-list"><a href="./cart.html">Cart</a></li>
+            <li class="nav-list"><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
     <header class="header">
       <div class="iconsearch">
-      <img src="./Logo.jpg" class="logo">
+      <img src="./Logo.webp" class="logo">
       <i class="fas fa-search" id="search-icon"></i>
       <div id="search-overlay" class="search-overlay">
           <input type="text" class="search-input" placeholder="Search..." />
@@ -62,15 +91,41 @@
       </div>
       </div>
     </header>
-      <div class="body1">
-        <div class="overlay-text">
-          <h1 class="overlayHeader">Hemp Haul</h1>
-          <p class="overlayP">Providing holistic CBD and Delta-8 products to promote a balanced lifestyle</p>
-          <a href="shop.html" class="shop-button">Shop All Products</a>
-        </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image:url('./hiker2.png')">
+              <div class="bottom-overlay-content">
+                  <div class="centered-container">
+                      <h1 class="titleClass">Hemp Haul</h1>
+                      <p class="hero-tagline">Providing holistic CBD and Delta-8 products to promote a balanced lifestyle</p>
+                      <a href="#"><button class="header-button-class">Shop All Products</button></a>
+                  </div>
+              </div>
+          </div>
+          <div class="swiper-slide" style="background-image:url('./friends.png')">
+              <div class="bottom-overlay-content">
+                  <div class="centered-container">
+                      <h1 class="titleClass">Hemp Haul</h1>
+                      <p class="hero-tagline">Providing holistic CBD and Delta-8 products to promote a balanced lifestyle</p>
+                      <a href="#"><button class="header-button-class">Shop All Products</button></a>
+                  </div>
+              </div>
+          </div>
+          <div class="swiper-slide" style="background-image:url('./biker1.png')">
+              <div class="bottom-overlay-content">
+                  <div class="centered-container">
+                      <h1 class="titleClass">Hemp Haul</h1>
+                      <p class="hero-tagline">Providing holistic CBD and Delta-8 products to promote a balanced lifestyle</p>
+                      <a href="#"><button class="header-button-class">Shop All Products</button></a>
+                  </div>
+              </div>
+          </div>
       </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  </div>
       <div class="body2">
-        <img src = "./hempleaf2.jpg" alt="hempleaf" class="hempleaf2">
+        <img src = "./hempleaf.webp" alt="hempleaf" class="hempleaf2">
         <div class="body2text">
          <h1 class="body2header">Hemp Haul</h1>
          <h2 class="body2sub">Premium Cannabis Products Online</h2>
@@ -78,57 +133,65 @@
         </div>
       </div>
       <div class="body3">
-         <img src ="./hempleaf.png" class="hempleaf2">
-         <h1 class="body3header" style="font-weight:normal">Featured Cannabis Products</h1>
+         <img src ="./hempleaf.webp" class="hempleaf2">
+         <h1 class="body3header">Featured Cannabis Products</h1>
          <div class="product-container">
-          <a href="./Product1.html">
-            <div class="product">
-             <img src="./cbdproduct1.png">
-             <p class="productTitle">DeltaDaze Elixir</p>
-             <p class="productPrice1">$34.95</p>
-             <a href="./Product1.html" class="buy-button">Buy Now</a>
+              <a href="./Product1.html">
+                <div class="product-row">
+                  <div class="product">
+                    <img src="./cbdproduct1.webp">
+                    <p class="productTitle">DeltaDaze Elixir</p>
+                    <p class="productPrice1">$34.95</p>
+                    <a href="./Product1.html" class="buy-button">Buy Now</a>
+                  </div>
+               </div>
+              </a>
+              <a href="./Product2.html">
+                <div class="product-row">
+                  <div class="product">
+                    <img src="./cbdproduct2.webp">
+                    <p class="productTitle">DeltaHarmony Tonic</p>
+                    <p class="productPrice1">$24.95</p>
+                    <a href="./Product2.html" class="buy-button">Buy Now</a>
+                  </div>
+                </div>
+              </a>
+              <a href="./Product5.html">
+                <div class="product-row">
+                  <div class="product">
+                    <img src="./cbdproduct5.webp">
+                    <p class="productTitle">Heavenly Herbal Bliss Bites</p>
+                    <p class="productPrice1">$44.95</p>
+                    <a href="./Product5.html" class="buy-button">Buy Now</a>
+                  </div>
+                </div>
+              </a>
+              <a href="./Product6.html">
+                <div class="product">
+                  <img src="./cbdproduct6.webp">
+                  <p class="productTitle">The D8 Bakery Tranquil Treats</p>
+                  <p class="productPrice1">$19.95</p>
+                  <a href="./Product6.html" class="buy-button">Buy Now</a>
+                </div>
+              </a>
+          </div>
+      </div>
+      <section class="email-form">
+        <div class="plane-text">
+            <div class="email-img-container">
+                <img src="./Sandbox/airplane.png" alt="send">
             </div>
-          </a>
-          <hr class="dividerDisp">
-          <a href="./Product2.html">
-           <div class="product">
-             <img src="./cbdproduct2.png">
-             <p class="productTitle">DeltaHarmony Tonic</p>
-             <p class="productPrice1">$24.95</p>
-             <a href="./Product2.html" class="buy-button">Buy Now</a>
-           </div>
-           <hr class="dividerDisp">
-          </a>
-          <a href="./Product5.html">
-           <div class="product">
-             <img src="./cbdproduct5.png">
-             <p class="productTitle">Heavenly Herbal Bliss Bites</p>
-             <p class="productPrice1">$44.95</p>
-             <a href="./Product5.html" class="buy-button">Buy Now</a>
-           </div>
-         </a>
-         <hr class="dividerDisp">
-          <a href="./Product6.html"><div class="product">
-            <img src="./cbdproduct6.png">
-            <p class="productTitle">The D8 Bakery Tranquil Treats</p>
-            <p class="productPrice1">$19.95</p>
-            <a href="./Product6.html" class="buy-button">Buy Now</a>
-          </div></a>
+            <p class="promo-text">Want to receive discounts, promos, special offers, and 20% off your next purchase?</p>
         </div>
-      </div>
-      <div class="emailform">
-        <div class="planetext">
-          <img src="./airplane.png" alt="Paper Airplane" class="airplane-img">
-          <p class="promo-text">Want to receive discounts, promos, special offers, and 20% off your next purchase?</p>
+        <div class="email-sign">
+            <input type="text" id="email-field" placeholder="Enter your email...">
+            <button class="signup-button">Sign up</button>
         </div>
-        <div class="formSign">
-          <input type="text" id="email-field" placeholder="Enter your email...">
-          <button class="signup-button">Sign up</button>
-        </div>
-      </div>
+      </section>
       <div class="body4">
-         <img src="./Logo.jpg" alt="logo" class="logo3">
-         <h1 class="indexh1">Hemp Haul</h1>
+        <div class="body-4-logo-wrapper">
+         <img src="./Logo.webp" alt="logo" class="logo3">
+        </div>
          <p class="centered-text1">Our mission is to serve the highest quality cannabis products online. Shop CBD, CBC, CBG, CBN, Delta-8-THC, Delta-9-THC, Delta-10-THC, HHC, and High-THCa products with confidence. Customer Satisfaction is of the highest importance. Please don’t hesitate to reach out. Thanks for shopping Hemp Haul!</p>
          <div class="socialIcons">
           <i class="fab fa-facebook-f"></i>
@@ -139,7 +202,23 @@
          <p class="right-aligned-text">Disclaimer: HempHaul will not be held responsible for any claims or testimonials regarding medical efficacy of any of our products. The FDA (Food and Drug Administration) has not evaluated any of these statements, nor have the claims been confirmed by FDA-acknowledged research. Neither our staff nor our products are intended to diagnose, cure, prevent, or treat any disease or medical condition. Please consult your physician before including any of our products in your wellness plan.</p>
          <p class="copyright">Hemp Haul © 2023. All Rights Reserved.</p>
       </div>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
       <script>
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+          var swiper = new Swiper('.swiper-container', {
+            effect: 'fade',
+            speed: 1000,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+          });
+        });
 
         document.getElementById('hamburger-menu').addEventListener('click', function() {
           document.getElementById('overlay').style.width = '100%';

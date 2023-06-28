@@ -1,23 +1,14 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
 body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: Cambria;
 }
 
 
 .header {
-  background-color: rgb(68, 99, 55);
-  color: rgb(251, 220, 165);
+  background-color: rgb(80, 120, 70);
+  color: rgb(248, 233, 205);
   width: 100%;
-  min-height: 12vh;
+  padding: 16px 16px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -25,7 +16,7 @@ body {
   position: sticky;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   top: 0;
-  z-index: 1;
+  z-index: 11;
 }
 
 .cartIcon {
@@ -66,8 +57,7 @@ body {
 }
 
 .header img {
-  height: 11vh;
-  width: auto;
+  width: 80px;
 }
 
 
@@ -93,18 +83,6 @@ body {
 }
 
 
-.body1 {
-  position: relative;
-  min-height: 70vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-  text-align: center;
-}
-
 /* begin new css */
 
 .hamburger-menu {
@@ -113,7 +91,7 @@ body {
   justify-content: center;
   align-items: space-between;
   cursor: pointer;
-  background-color: rgb(68, 99, 55);
+  background-color: rgb(80, 120, 70);
   position: relative;
   
 }
@@ -131,7 +109,6 @@ body {
   transition: 0.2s;
   min-width: 20px;
   min-height: 3px;
-  margin-right: 3vw;
 }
 
 .hamburger-menu div:hover {
@@ -168,7 +145,7 @@ body {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 2;
+  z-index: 12;
   top: 0;
   right: 0;
   background-color: rgba(0,0,0);
@@ -250,60 +227,6 @@ body {
   color: #777;
 }
 
-/* end new css */
-  
-  
- .body1:before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    opacity: 90%;
-    width: 100%;
-    background-image: url("./hiker2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* This z-index ensures the overlay-text appears over the image */
-    z-index: -1;
-} 
-
-
-.overlay-text {
-  text-align: center; 
-  width: 100%;
-  height: auto;
-  font-family: Cambria;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.shop-button {
-  display: inline-block;
-  padding: 2.8vh 10vw;
-  font-size: 1rem;
-  background-color: rgb(68, 99, 55); 
-  color: white; 
-  text-decoration: none;
-  border-radius: 30px; 
-  transition: background-color 0.3s ease;
-  margin-top: 4vh;
-  font-family: Cambria;
-}
-
-.shop-button:hover {
-  background-color: #08350f; 
-}
-
-.overlayHeader {
-  font-size: 2.8rem;
-  font-family: Cambria;
-  color: black;
-  white-space: nowrap;
-}
 
 .Haul {
   color: black;
@@ -311,17 +234,10 @@ body {
   opacity: 95%;
 }
 
-.overlayP {
-  font-size: 1rem;
-  width: 80%;
-  font-family: Cambria;
-  color: black;
-  opacity: 95%;
-  margin-top: 3vh;
-}
 
 .body2 {
-  background-color: rgb(251, 220, 165);
+  background-color: whitesmoke;
+  color: rgb(60, 60, 60);
   height: auto;
   display: flex;
   justify-content: center;
@@ -329,14 +245,13 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  padding: 2rem 2.5rem;
 }
 
 .hempleaf1 {
   width: 14vw;
   align-self: center;
   margin-bottom: 0;
-  padding-top: 6vh;
-  padding-bottom: 3vh;
 }
 
 .body2text {
@@ -345,21 +260,24 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: rgb(68, 99, 55);
+  color: rgb(60, 60, 60);
   font-family: Cambria;
 }
 
 .ptext {
   width: 80%;
-  padding-bottom: 10vw;
   font-size: 1.2rem;
+  color: rgb(60, 60, 60);
 }
 
 .body2header {
-  margin-top: 6px;
+  /* margin-top: 6px; */
   font-size: 2.4rem;
   font-family: Cambria;
-  padding-bottom: 3vh;
+  /* padding-bottom: 3vh; */
+  color: rgb(60, 60, 60);
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .body2sub {
@@ -367,6 +285,7 @@ body {
   width: 85%;
   font-family: Cambria;
   padding-bottom: 3vh;
+  color: rgb(60, 60, 60);
 }
 
 .body3 {
@@ -375,48 +294,57 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: whitesmoke;
+  padding-bottom: 4rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 1 rem;
+}
+
+.text-sign {
+  display: flex;
+  flex-basis: 50%;
 }
 
 .product-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the items */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 100%;
-  padding-bottom: 10vh;
+  gap: 8px;
   font-family: Cambria;
 }
 
-#orderInform div, p, a {
-  margin-top: 20px;
-}
+
 
 .hempleaf2 {
-  min-width: 90px;
-  width: 15vw;
+  width: 80px;
   height: auto;
-  margin-top: 4vh;
 }
 
 .body3header {
   font-family: Cambria;
-  padding-bottom: 5vh;
   width: 100%;
   font-size: 1.8rem;
+  margin: 32px auto;
+  color: rgb(60, 60, 60);
 }
 
 .product {
   text-align: center;
   color: rgb(45, 75, 40);
-  flex: 1 0 100%; 
-  flex-grow: 0;
-  flex-shrink: 0;
+  /* object-fit: cover; */
 }
+
+
 
 
 .product a {
   text-decoration: none;
   color: inherit;
+}
+
+.product-container > a {
+  display: contents;
 }
 
 .product img {
@@ -438,6 +366,7 @@ body {
 
 .buy-button {
   margin-top: 2.2vh;
+  margin-bottom: 24px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -476,7 +405,7 @@ body {
   padding: 2rem;
   text-align: center;
   width: 100%;
-  background-color: rgb(68, 99, 55);
+  background-color: rgb(80, 120, 70);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -485,7 +414,7 @@ body {
 
 .indexh1 {
   color: black;
-  font-family: cambria;
+  font-family: Cambria;
 }
 
 .imagecontainer3 {
@@ -494,17 +423,22 @@ body {
   align-items: center;
 }
 
-.logo3 {
-  width: 33vw;
+.body-4-logo-wrapper {
+  width: 160px;
+}
+
+.body-4-logo-wrapper img {
+  width: 100%;
   height: auto;
 }
+
 
 .centered-text1 {
   width: 90%;
   margin-top: 4vh;
   text-align: center;
   font-family: Cambria;
-  color: rgb(19, 19, 19);
+  color: rgb(26, 25, 23);
   font-size: 1rem;
   line-height: 1.3;
   font-weight: none;
@@ -522,7 +456,7 @@ body {
   font-size: 1.4em;
   margin-right: 2vw;
   padding-left: 1.5vw;
-  color: rgb(251, 219, 162)
+  color: rgb(255, 255, 255);
 }
 
 .fab:hover {
@@ -540,12 +474,12 @@ body {
   width: 100%;
   text-align: left;
   font-family: Cambria;
-  color: rgb(19, 19, 19);
+  color: rgb(26, 25, 23);
   line-height: 1.3;
 }
 
 .copyright {
-  color:rgb(19, 19, 19);
+  color:rgb(26, 25, 23);
   font-family: Cambria;
   margin-top: 3vh;
   text-align: left;
@@ -555,7 +489,6 @@ body {
 
  .shopPhoto {
   position: relative;
-  min-height: 33vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -566,7 +499,7 @@ body {
 
 .shopPhoto::before {
   content: "";
-  position: fixed; /* or absolute */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
@@ -580,6 +513,7 @@ body {
 
 .overlay-text2 {
   color: white;
+  background-color: rgba(0, 0, 0, .3);
   font-family: Cambria;
   line-height: 1.1;
   z-index: 0;
@@ -589,6 +523,8 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
+  padding-top: calc(10%);
+  padding-bottom: calc(10%);
 }
 
 
@@ -597,14 +533,12 @@ body {
   color: white;
   width: 100%;
   text-align: center;
-  padding-bottom: 4.5vh;
 }
 
 .overlay-text2 p {
   font-size: .9rem;
   font-weight: bold;
   color: rgb(128, 106, 36);
-  margin-top: -1.3vh;
   align-self: center;
   width: 100%;
 }
@@ -639,15 +573,21 @@ body {
   margin-top: 1.8vh;
 }
 
-.product-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: stretch;
+.product-row::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: rgb(80, 80, 80); /* Adjust as needed */
+  width: 80%; /* Adjust as needed */
+  margin: 0 auto; /* This centers the pseudo-element */
 }
 
+
+
+
 .body2logo {
-  height: 33vw;
+  width: 100px;
+  height: auto;
 }
 
 .body2shop {
@@ -678,55 +618,7 @@ body {
   color: rgb(251, 220, 165)
 }
 
-.emailform {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: 100%;
-  background-color: rgb(251, 220, 165);
-  box-shadow: 0 5px 10px rgba(0, 0, 0);
-}
-
-#email-field {
-  height: 7vh;
-  margin-right: 3vw;
-  padding-left: 2vw;
-}
-
-.planetext {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 90%;
-  padding-top: 6vh;
-  padding-bottom: 5vh;
-}
-
-.formSign {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 6vh;
-}
-
-.promo-text {
-  width: 73%;
-  line-height: 1.3;
-  text-align: center;
-  font-family: Cambria;
-}
- 
-
-.emailform img {
-  width: 12%;
-  object-fit: contain;
-  max-height: 50px;
-}
+/* begin sandbox emailform css */
 
 
 
@@ -740,6 +632,7 @@ body {
   display: inline-block;
   font-size: 16px;
   border-radius: 50px;
+  min-width: 160px;
 }
 
 .signup-button:hover {
@@ -791,7 +684,7 @@ body {
 }
 
 
-.productShop p, h1 {
+.productShop p {
   width: 80%;
   padding-right: 2rem;
   padding-left: 6vw;
@@ -1133,7 +1026,7 @@ color: inherit;
   border: 1px solid grey;
   margin-left: 30px;
   margin-top: 15px;
-  font-family: cambria;
+  font-family: Cambria;
   font-size: 1rem;
 }
 
@@ -1313,7 +1206,7 @@ color: inherit;
   position: absolute;
   right: 10px;
   top: 50px;
-  font-family: cambria;
+  font-family: Cambria;
   padding: 3.5vw;
   background-color: #f1f1f1;
   color: black;
@@ -1536,7 +1429,7 @@ background-repeat: no-repeat;
   transform: translateY(-50%);
   background-color: white;
   border: none;
-  font-family: Arial;
+  font-family: Cambria;
   font-size: 1.1rem;
   color: grey;
 }
@@ -1548,7 +1441,7 @@ background-repeat: no-repeat;
   transform: translateY(-50%);
   background-color: white;
   border: none;
-  font-family: Arial;
+  font-family: Cambria;
   font-size: 1.1rem;
   color: grey;
 }
@@ -1598,19 +1491,6 @@ background-repeat: no-repeat;
 }
 
 /* start CSS for contact page */
-
-/* .opaque-background3 {
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- background: url('./friends.png') no-repeat center center;
- background-size: cover;
- background-attachment: fixed;
- background-position: center;
- background-repeat: no-repeat;
-} */
 
 .overlayText4 h1 {
   font-size: 3.1rem;
@@ -1801,22 +1681,44 @@ span.fa-stack.fa-lg {
   background-color: white;
 }
 
-@media screen and (min-width: 800px) {
-
-  .overlayHeader {
-    font-size: 4rem;
-    margin: 0 auto;
-    padding-right: 9vw;
-    margin-top: 50px;
+@media screen and (max-width: 409px) {
+  .product-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
-  .overlayP {
-    font-size: 1.1rem;
-    width: 25%;
-    margin: 0 auto;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    padding-left: 20px;
+  .ptext {
+    width: 90%;
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 799px) and (min-width: 410px) {
+  .product-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .product-row::after {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 800px) {
+
+  .overlay-text2 {
+    padding-top: calc(7%);
+    padding-bottom: calc(7%);
+  }
+
+  .centered-text1 {
+    width: 40%;
+  }
+
+  .product-row::after {
+    display: none;
   }
 
   .body2sub {
@@ -1827,13 +1729,8 @@ span.fa-stack.fa-lg {
   .ptext {
     width: 60%;
     font-size: 1.4rem;
-    margin-bottom: -15px;
-    padding-right: 8px;
   }
 
-  .body2header {
-    padding-right: 6vw;
-  }
 
   .hempleaf1 {
     margin-top: 40px;
@@ -1841,19 +1738,11 @@ span.fa-stack.fa-lg {
     width: 7vw;
   }
 
-  .shop-button {
-    padding: 2.2vh 2.6vw;
-  }
-
   .hempleaf2 {
-    height: 7vw;
-    width: auto;
-    margin-top: 10vh;
+    width: 80px;
+    height: auto;
   }
 
-  .product {
-    flex: 1 0 21%; 
-  }
 
   .productShop {
     display: flex;
@@ -1957,46 +1846,22 @@ span.fa-stack.fa-lg {
     top: 3vh;
   }
 
-  .body1 {
-    height: 76vh;
-  }
 
-  .overlay-text {
-    margin-top: 23vh;
-  }
 
-  .body3header {
-    padding-right: 100px;
-    box-sizing: border-box;
-  }
 
   .dividerDisp {
     display: none;
   }
 
-  .centered-text1 {
-    width: 30%;
-    padding-left: 32vw;
-    margin-top: 3vh;
-  }
 
   .right-aligned-text {
     width: 90%;
     padding-left: 4.7vw;
   }
-
-  .overlay-text2 {
-    margin-top: 5vh;
-  }
-
-  .overlay-text2 p {
-    margin-top: 2.5vh;
-  }
  
   .body2logo {
-    height: 13vw;
-    padding-right: 16px;
-    padding-bottom: 6vh;
+    width: 120px;
+    height: auto;
   }
 
   .hempleaf3 {

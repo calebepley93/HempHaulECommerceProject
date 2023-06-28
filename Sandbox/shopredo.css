@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Cambria;
+}
+
+.shop-section {
+    padding: 64px 40px;
+    background-color: whitesmoke;
+    color: rgb(60, 60, 60);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.shop-logo-cont {
+    width: 100px;
+}
+
+.shop-logo-cont img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.shop-text {
+    margin: 24px 0px;
+    font-size: 1rem;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    display: block;
+}
+
+.shop-text a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.shop-hemp-logo-cont {
+    width: 64px;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+.shop-hemp-logo-cont img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+}
+
+.dummy-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+  .dividing-line {
+    width: 100%;
+    border: 1px solid rgb(182, 182, 182);
+    grid-column: 1 / -1; 
+    margin-bottom: 16px;
+  }
+  
+  .dummy-product-img-cont {
+    width: 100%;
+  }
+
+    .dummy-product-img-cont img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .prodTxt {
+        font-size: 1rem;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .prodTxt1 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    .category-title {
+        font-size: 36px;
+        margin-bottom: 32px;
+    }
+
+    .dummy-product a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .buy-button1 {
+        padding: 8px 24px;
+        margin-bottom: 16px;
+        background-color: rgb(68, 99, 55);
+        border-radius: 40px;
+        color: white !important;
+    }
+
+    .buy-button1:hover {
+        background-color: rgb(60, 60, 60);
+    }
+  
+  @media screen and (min-width: 600px) {
+    .product-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+  
+  }
+  
+  @media screen and (min-width: 900px) {
+    .product-grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  
+  }

@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.email-form {
+    padding: 60px 44px;
+    background-color: rgb(251, 220, 165);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.email-img-container {
+    width: 50px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.email-img-container img {
+    width: 100%;
+    height: auto;
+}
+
+.plane-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.email-sign {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+} 
+
+.promo-text {
+    font-size: 16px;
+    font-family: Cambria;
+    color: rgb(60,60,60);
+}
+
+#email-field {
+    width: 40%;
+    height: 40px;
+    padding: 8px 16px;
+}
+
+.signup-button {
+    border: none;
+    background: rgb(45, 75, 40);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px;
+    min-width: 160px;
+  }
+  
+  .signup-button:hover {
+    background-color: #08350f;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .email-form {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .email-sign, .plane-text {
+        justify-content: center;
+    }
+
+    #email-field {
+        margin-right: 16px;
+        min-width: 150px;
+    }
+
+    .email-form {
+        padding: 40px 24px;
+    }
+  
+  }

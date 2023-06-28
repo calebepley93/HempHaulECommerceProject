@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./herosection.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap">  
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url('./hiker2.png')">
+                <div class="bottom-overlay-content">
+                    <div class="centered-container">
+                        <h1 class="titleClass">Hemp Haul</h1>
+                        <p class="hero-tagline">Providing holistic CBD and Delta-8 products to promote a balanced lifestyle</p>
+                        <a href="#"><button class="header-button-class">Shop All Products</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image:url('./friends.png')">
+                <div class="bottom-overlay-content">
+                    <div class="centered-container">
+                        <h1 class="titleClass">Hemp Haul</h1>
+                        <p class="hero-tagline">Providing holistic CBD and Delta-8 products to promote a balanced lifestyle</p>
+                        <a href="#"><button class="header-button-class">Shop All Products</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image:url('./youngpeople.png')">
+                <div class="bottom-overlay-content">
+                    <div class="centered-container">
+                        <h1 class="titleClass">Hemp Haul</h1>
+                        <p class="hero-tagline">Providing holistic CBD and Delta-8 products to promote a balanced lifestyle</p>
+                        <a href="#"><button class="header-button-class">Shop All Products</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var swiper = new Swiper('.swiper-container', {
+              effect: 'fade',
+              speed: 1000,
+              navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+              },
+              autoplay: {
+                  delay: 3000,
+                  disableOnInteraction: false,
+              },
+            });
+          });
+    </script>
+</body>
+</html>
