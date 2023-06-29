@@ -1,11 +1,47 @@
 TO DO
 
-- make header for large screens
-- universal padding, font, and color
-- consistent heading sizes
-- complete responsiveness for all screen sizes
+<!-- 1. Turn background header white
+2. Come up with white and black colors
+    * white rgb(236, 241, 234) - header background color
+    * lighter black - rgb(35, 51, 28)
+    * black rgb(13, 19, 10) - text color  
+    * primary color rgb(68, 99, 55) -->
 
-Design notes
+<!-- 3. Remove background on logo image -->
 
-- logo size 150 x 100
-- padding 0 40px
+Header 
+
+background color -- rgb(80, 120, 70)
+header text -- white (rgb(255, 255, 255)) or a light gray (rgb(220, 220, 220))
+button color -- brown rgb(98, 86, 63)
+
+Hero section 
+
+background color -- white or very light gray background  rgb(240, 240, 240)
+important text -- brand's primary green (rgb(68, 99, 55))
+less critical text -- softer gray color (like rgb(100, 100, 100))
+
+
+SHOP SECTION NOTES
+
+full screen
+
+font 16px
+h2 36px font-weight normal
+
+product name 
+
+font 1 rem
+
+price 
+
+font 1.2 rem
+font-weight 600 
+
+button 
+
+font 1 rem
+
+
+* collapses to two rows at about 900px width
+* collapses into one row at about 490px width 

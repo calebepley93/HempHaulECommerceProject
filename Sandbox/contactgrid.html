@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./contactgrid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="contact-grid-canvas">
+        <div class="contact-grid-container">
+            <div class="content-padded-wall">
+                <div class="contact-phone-text">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                      
+                    <h4 class="contact-call-us">Give Us a Call</h4>
+                </div>
+                <span class="contact-phone-number">(555) 123 4567</span>
+            </div>
+            <div class="content-padded-wall content-pink-background">
+                <div class="envelope-message">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <h4 class="contact-send-a-message">Send Us a Message</h4>
+                </div>
+                <div class="first-last-name-grid-container">
+                    <div class="contact-first-name-container">
+                        <label for="first name">First Name<span class="span-red">*</span></label>
+                        <input type="text" name="first name" id="first name" placeholder="First Name">
+                    </div>
+                    <div class="contact-last-name-container">
+                        <label for="last name">Last Name<span class="span-red">*</span></label>
+                        <input type="text" name="last name" id="last name" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="contact-email-container">
+                    <label for="email">Email<span class="span-red">*</span></label>
+                    <input type="text" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="contact-help-container">
+                    <label for="help" name="help" id="help" class="helpText"> How can we help you?<span class="span-red">*</span></label>
+                    <select id="help" name="help">
+                        <option value="">Select an option...</option>
+                        <option value=""></option>
+                        <option value="help">I'm a customer who needs help with an order</option>
+                        <option value="qs">I'm a customer who has questions about your products</option>
+                        <option value="vendor">I'm a vendor who like to connect with you</option>
+                        <option value="other">Other (please specify below)</option>
+                    </select>
+                </div>
+                <div class="contact-message-container">
+                    <label for="message">Message<span class="span-red">*</span></label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <div class="file-upload-container">
+                    <label for="file-upload">Upload a File</label>
+                    <input type="file" name="file-upload" id="file-upload">
+                </div>
+                <input type="submit" value="Submit" class="contact-form-submit-button">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

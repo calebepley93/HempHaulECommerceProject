@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: whitesmoke;
+    color: rgb(60, 60, 60);
+    font-family: Cambria;
+}
+
+.contact-grid-canvas {
+    padding-bottom: 64px;
+    padding-left: 40px;
+    padding-right: 40px;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.contact-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.span-red {
+    color: red;
+}
+
+.content-padded-wall {
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-pink-background {
+    background-color: rgb(248, 233, 205);
+}
+
+.contact-phone-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    width: 100%;
+}
+  
+.contact-call-us {
+    font-size: 30px;
+}
+
+.contact-phone-text i {
+    font-size: 30px;
+    margin-right: 16px;
+    color: rgb(80, 120, 70);
+}
+
+.contact-phone-number {
+    font-size: 24px;
+    color: rgb(80, 120, 70);
+}
+
+.envelope-message {
+    display: flex;
+    align-items: center;
+}
+
+.contact-send-a-message {
+    font-size: 30px;
+}
+
+.envelope-message i {
+    font-size: 30px;
+    margin-right: 16px;
+    color: rgb(80, 120, 70);
+}
+
+.contact-first-name-container, .contact-last-name-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.contact-first-name-container label {
+    margin-bottom: 8px;
+}
+
+.contact-last-name-container label {
+    margin-bottom: 8px;
+}
+
+.contact-first-name-container input {
+    padding: 8px;
+}
+
+.contact-last-name-container input {
+    padding: 8px;
+}
+
+.first-last-name-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+    margin-top: 24px;
+}
+
+.contact-email-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.contact-email-container label {
+    margin-bottom: 8px;
+}
+
+.contact-email-container input {
+    padding: 8px;
+}
+
+.contact-help-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.contact-help-container label {
+    margin-bottom: 8px;
+}
+
+.contact-help-container select {
+    padding: 8px;
+    background-color:white;
+}
+
+.contact-message-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.contact-message-container label {
+    margin-bottom: 8px;
+}
+
+.contact-message-container textarea {
+    padding: 8px;
+}
+
+.file-upload-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.file-upload-container label {
+    margin-bottom: 8px;
+}
+
+.contact-form-submit-button {
+    padding: 8px;
+    background-color: rgb(80, 120, 70);
+    color: whitesmoke;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 850px) and (min-width: 490px) {
+    .contact-grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-padded-wall {
+        padding: 32px;
+    }
+}
+
+@media screen and (max-width: 489px) {
+    .first-last-name-grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-padded-wall {
+        padding: 32px;
+    }
+
+    .contact-grid-canvas {
+        padding-bottom: 40px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+

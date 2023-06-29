@@ -1,4 +1,10 @@
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Cambria;
 }
@@ -236,7 +242,7 @@ body {
 
 
 .body2 {
-  background-color: whitesmoke;
+  background-color: rgb(248, 233, 205);
   color: rgb(60, 60, 60);
   height: auto;
   display: flex;
@@ -295,10 +301,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: whitesmoke;
-  padding-bottom: 4rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  padding-top: 1 rem;
+  padding: 2rem 2.5rem;
 }
 
 .text-sign {
@@ -329,27 +332,8 @@ body {
   color: rgb(60, 60, 60);
 }
 
-.product {
-  text-align: center;
-  color: rgb(45, 75, 40);
-  /* object-fit: cover; */
-}
-
-
-
-
-.product a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .product-container > a {
   display: contents;
-}
-
-.product img {
-  max-width: 100%;
-  height: auto;
 }
 
 .productTitle {
@@ -362,24 +346,6 @@ body {
   font-size: 1.3rem;
   margin-top: 2.2vh;
   color: black;
-}
-
-.buy-button {
-  margin-top: 2.2vh;
-  margin-bottom: 24px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.8rem 3rem;
-  background-color: rgb(68, 99, 55);
-  color: white !important;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: background-color 0.3s ease;
-}
-
-.buy-button:hover {
-  background-color: #08350f;
 }
 
 .divider {
@@ -529,16 +495,17 @@ body {
 
 
 .overlay-text2 h1 {
-  font-size: 2.2rem;
+  font-size: 48px;
   color: white;
   width: 100%;
   text-align: center;
+  margin-bottom: 12px;
 }
 
 .overlay-text2 p {
-  font-size: .9rem;
+  font-size: 1rem;
   font-weight: bold;
-  color: rgb(128, 106, 36);
+  color: rgb(153, 118, 53);
   align-self: center;
   width: 100%;
 }
@@ -556,72 +523,6 @@ body {
 .hempleaf3 {
   height: 14vh;
 }
-
-.category-title {
-  text-align: center;
-  font-size: 2em;
-  color: black;
-  margin-bottom: 1rem;
-  font-family: Cambria;
-  padding-bottom: 2vh;
-}
-
-.prodTxt {
-  color: black;
-  font-size: 1.2rem;
-  font-family: Cambria;
-  margin-top: 1.8vh;
-}
-
-.product-row::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background: rgb(80, 80, 80); /* Adjust as needed */
-  width: 80%; /* Adjust as needed */
-  margin: 0 auto; /* This centers the pseudo-element */
-}
-
-
-
-
-.body2logo {
-  width: 100px;
-  height: auto;
-}
-
-.body2shop {
-  background-color: white;
-  height: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
-
-.shopbody2text {
-  font-family: Cambria;
-  text-align: center;
-  width: 90%;
-  color: rgb(45, 75, 40);
-  margin-top: -.05rem;
-  line-height: 1.4;
-  margin-bottom: 3.5vh;
-}
-
-.shopbody2text a {
-  text-decoration: none;
-  color: rgb(128, 106, 36)
-}
-
-.shopbody2text a:hover {
-  color: rgb(251, 220, 165)
-}
-
-/* begin sandbox emailform css */
-
-
-
 
 .signup-button {
   border: none;
@@ -727,6 +628,7 @@ body {
   font-family: Cambria;
   margin-bottom: 3vh;
   padding-top: 5vh;
+  margin-left: 6.5vw;
 }
 
 .productDetails {
@@ -1224,6 +1126,7 @@ color: inherit;
   text-decoration: none;
 }
 
+
 .cartIconContainer:hover .dropdown-content {
   opacity: 1;
   visibility: visible;
@@ -1314,57 +1217,19 @@ color: inherit;
 
 /* Start of aboutus css*/
 
-.aboutUsimg, .contactImg {
-  position: relative;
-  height: 25vh;
+ .contactImg {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.contactImg::before {
-  content: "";
-  position: fixed; /* or absolute */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Ensure it sits below content */
-  background: url('./cityskyline.png') no-repeat center center;
+  background: url('./cityskyline.png') no-repeat;
   background-size: cover;
 }
 
 
 
-/* .opaque-background2 {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: url('./cityskyline.png') no-repeat center center;
-background-size: cover;
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-} */
-
-.aboutUsimg::before {
-  content: "";
-  position: fixed; /* or absolute */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Ensure it sits below content */
-  background: url('./cityskyline.png') no-repeat center center;
-  background-size: cover;
-}
-
-.overlayText3, .overlayText4 {
-  position: absolute;
+.overlayText4 {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1375,28 +1240,11 @@ background-repeat: no-repeat;
   font-family: Cambria;
   width: 100%;
   height: 100%;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-
-.overlayText3 h1 {
-  font-size: 3.3rem;
-}
-
-.overlayText3 p {
-  font-size: 1rem;
-  font-weight: bold;
-  color: rgb(128, 106, 36);
-}
-
-.overlayText3 a {
-  text-decoration: none;
-  color: inherit; 
-}
-
-.overlayText3 a:hover {
-  text-decoration: none;
-  color: white;
-}
 
 .aboutUs {
   background-color: white;
@@ -1405,95 +1253,13 @@ background-repeat: no-repeat;
   padding: .5rem 2rem;
 }
 
-.cityimgcont img {
-  height: auto;
-  width: 85vw;
-  margin-top: 6vh;
-  margin-left: 6vw;
-}
 
-.aboutUsText {
-  font-family: Cambria;
-  width: 75%;
-  margin-left: 10vw;
-}
-
-#carousel {
-  position: relative;
-}
-
-#prev {
-  position: absolute;
-  top: -380px;
-  left: 10px; /* Adjust as needed */
-  transform: translateY(-50%);
-  background-color: white;
-  border: none;
-  font-family: Cambria;
-  font-size: 1.1rem;
-  color: grey;
-}
-
-#next {
-  position: absolute;
-  top: -380px;
-  right: 30px; /* Adjust as needed */
-  transform: translateY(-50%);
-  background-color: white;
-  border: none;
-  font-family: Cambria;
-  font-size: 1.1rem;
-  color: grey;
-}
-
-#next:hover, #prev:hover {
-  cursor: pointer;
-  color: darkgrey;
-}
-
-.carousel-item {
-  display: none;
-  font-family: Cambria;
-  width: 75%;
-  margin-left: 9vw;
-}
-
-.carousel-item h2, h3, p {
-  margin-top: 3vh;
-}
-
-.carousel-item.active {
-  display: block;
-}
-
-#nav {
-  text-align: center;
-  position: relative;
-}
-
-.indicator {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: gray;
-  margin: 5px;
-}
-
-.indicator-active {
-  background-color: blue;
-}
-
-#indicators {
-  margin-left: 37vw;
-  margin-top: 10px;
-  margin-bottom: 6vh;
-}
 
 /* start CSS for contact page */
 
 .overlayText4 h1 {
   font-size: 3.1rem;
+  margin-bottom: 24px;
 }
 
 .overlayText4 p {
@@ -1512,18 +1278,20 @@ text-decoration: none;
 }
 
 .contactSection {
-  display: inline-block;
-  height: auto;
   width: 100%;
   font-family: Cambria;
-  margin-bottom: 7vh;
-  background-color: white;
+  background-color: whitesmoke;
+  color: rgb(60, 60, 60);
+  padding-top: 32px;
+  padding-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .contQues {
-  width: 75%;
-  margin-left: 11vw;
+  margin: auto;
   line-height: 1.3;
+  max-width: 1000px;
 }
 
 .phone {
@@ -1627,19 +1395,6 @@ span.fa-stack.fa-lg {
   width: 100%;
 }
 
-#help {
-  margin-left: 4.5vw;
-  width: 89%;
-  height: 5vh;
-  border-radius: 3px;
-  border: .5px solid grey;
-}
-
-.helpText {
-  margin-left: 4.5vw;
-  align-self:baseline;
-  margin-bottom: 1vh;
-}
 
 .message {
   margin-left: 4.5vw;
@@ -1662,9 +1417,6 @@ span.fa-stack.fa-lg {
 }
 
 .contactSubmit {
-  margin-top: 8vh;
-  margin-bottom: 6vh;
-  margin-left: 4.5vw;
   color: white;
   width: 50vw;
   height: 6vh;
@@ -1677,9 +1429,7 @@ span.fa-stack.fa-lg {
   cursor: pointer;
 }
 
-.aboutSection {
-  background-color: white;
-}
+
 
 @media screen and (max-width: 409px) {
   .product-container {
@@ -1692,16 +1442,16 @@ span.fa-stack.fa-lg {
     font-size: 1.2rem;
     margin-top: 0;
   }
+
+  .overlay-text2 h1 {
+    font-size: 32px;
+  }
 }
 
 @media screen and (max-width: 799px) and (min-width: 410px) {
   .product-container {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-  }
-
-  .product-row::after {
-    display: none;
   }
 
 }
@@ -1715,10 +1465,6 @@ span.fa-stack.fa-lg {
 
   .centered-text1 {
     width: 40%;
-  }
-
-  .product-row::after {
-    display: none;
   }
 
   .body2sub {
@@ -1859,22 +1605,13 @@ span.fa-stack.fa-lg {
     padding-left: 4.7vw;
   }
  
-  .body2logo {
-    width: 120px;
-    height: auto;
-  }
+
 
   .hempleaf3 {
     height: 14vh;
     padding-top: 3vh;
     padding-right: 14px;
     padding-bottom: 3vh;
-  }
-  
-  .category-title {
-    font-size: 2.8rem;
-    padding-right: 13px;
-    color:rgb(19, 19, 19)
   }
 
   .dividerShop {
@@ -1954,66 +1691,15 @@ span.fa-stack.fa-lg {
   margin-left: 50vw;
  }
 
- .cityimgcont img {
-  height: 40vw;
-  width: auto;
- }
-
- .aboutSection {
-  display: flex;
-  flex-direction: row;
-  padding-right: 4vw;
-  background-color: white;
-  z-index: 1;
- }
-
- .carousel-item {
-  padding-top: 4vh;
- }
-  
-
- #indicators {
-  margin-left: 24vw;
-  margin-top: 7vh;
- }
-
- #prev {
-  top: -40vh;
-  left: 5vw;
- }
-
- #next {
-  top: -40vh;
-  right: -1vw;
- }
-
- .overlayText3 h1 {
-  margin-left: 2vw;
-}
-
-  .overlayText3 p {
-    margin-left: 6vw;
-  }
-
-  .overlayText4 h1 {
-    margin-left: 2vw;
-  }
-
-  .overlayText4 p {
-    margin-left: 5.5vw;
-  }
-
   .contQues {
-    padding-top: 2vh;
-    width: 75%;
     text-align: left;
   }
 
   .contactFlexAlign {
     display: flex;
     flex-direction: row;
-    flex-basis: 40%;
-    padding-top: 5vh;
+    /* flex-basis: 40%; */
+    padding-top: 7vh;
   }
 
   .contactField {
@@ -2042,9 +1728,6 @@ span.fa-stack.fa-lg {
     width: 84%;
   }
 
-  #help {
-    width: 84%;
-  }
 
   .messageText {
     width: 84%;
