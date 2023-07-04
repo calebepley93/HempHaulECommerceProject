@@ -1,8 +1,15 @@
 let description = document.querySelector('#description');
 let reviews = document.querySelector('#reviews');
 
+let addToCartButtonListener = document.querySelector('.add-to-cart-btn');
+let viewCartAppear = document.querySelector('.view-cart-appear');
+
 let descriptionContent = document.querySelector('#description-content');
 let reviewsContent = document.querySelector('#reviews-content');
+
+addToCartButtonListener.addEventListener('click', function() {
+    viewCartAppear.style.display = 'block';
+});
 
 description.addEventListener('click', function() {
     description.style.backgroundColor = 'rgba(250, 250, 250, .85)'; 
@@ -27,6 +34,7 @@ description.click();
 $(document).ready(function(){
     $('.zoom').zoom();
   });
+
 
 
  

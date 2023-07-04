@@ -12,10 +12,37 @@
     crossorigin="anonymous" 
     referrerpolicy="no-referrer" 
    />
+   <link rel="stylesheet" href="./Sandbox/largeheader.css">
+  <link rel="stylesheet" href="./Sandbox/emailform.css">
   </head>
+  <header class="large-header">
+    <div class="header-topline">
+        <div class="follow-us">
+        <span class="follow-text">Follow us:</span>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+        <div class="logo-img-cont">
+            <img src="./Logo.webp" alt="hemphaullogo">
+        </div>
+        <div class="right-content">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+    <nav class="header-lowline">
+        <ul>
+            <li class="nav-list"><a href="./index.html">Home</a></li>
+            <li class="nav-list"><a href="./shop.html">Shop</a></li>
+            <li class="nav-list"><a href="./aboutus.html">About</a></li>
+            <li class="nav-list"><a href="./cart.html">Cart</a></li>
+            <li class="nav-list"><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
   <header class="header">
     <div class="iconsearch">
-    <img src="./Logo.jpg" class="logo">
+    <img src="./Logo.webp" class="logo">
     <i class="fas fa-search" id="search-icon"></i>
     <div id="search-overlay" class="search-overlay">
         <input type="text" class="search-input" placeholder="Search..." />
@@ -106,19 +133,22 @@
       <p class="loginBox-p">You must be <a href="./login">logged in</a> to post a review.</p>
     </div>
 </div>
-<div class="emailform">
-  <div class="planetext">
-    <img src="./airplane.png" alt="Paper Airplane" class="airplane-img">
-    <p class="promo-text">Want to receive discounts, promos, special offers, and 20% off your next purchase?</p>
+<section class="email-form">
+  <div class="plane-text">
+      <div class="email-img-container">
+          <img src="./Sandbox/airplane.png" alt="send">
+      </div>
+      <p class="promo-text">Want to receive discounts, promos, special offers, and 20% off your next purchase?</p>
   </div>
-  <div class="formSign">
-    <input type="text" id="email-field" placeholder="Enter your email...">
-    <button class="signup-button">Sign up</button>
+  <div class="email-sign">
+      <input type="text" id="email-field" placeholder="Enter your email...">
+      <button class="signup-button">Sign up</button>
   </div>
-</div>
+</section>
   <div class="body4">
-    <img src="./Logo.jpg" alt="logo" class="logo3">
-    <h1 class="indexh1">Hemp Haul</h1>
+    <div class="body-4-logo-wrapper">
+      <img src="./Logo.webp" alt="logo" class="logo3">
+    </div>
     <p class="centered-text1">Our mission is to serve the highest quality cannabis products online. Shop CBD, CBC, CBG, CBN, Delta-8-THC, Delta-9-THC, Delta-10-THC, HHC, and High-THCa products with confidence. Customer Satisfaction is of the highest importance. Please don’t hesitate to reach out. Thanks for shopping Hemp Haul!</p>
     <div class="socialIcons">
       <i class="fab fa-facebook-f"></i>

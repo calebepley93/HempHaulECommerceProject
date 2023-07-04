@@ -550,11 +550,13 @@ body {
 .productShop {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   background-color: white;
   width: 100%;
   font-family: Cambria;
-  padding: 64px 40px;
+  padding-top: 64px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 
@@ -583,7 +585,20 @@ body {
   display: flex;
   flex-direction: row;
   text-align: right;
+  align-items: center;
 }
+
+.view-cart-appear {
+  display: none;
+  color:rgb(45, 75, 40);
+  margin-left: 1vw;
+}
+
+.view-cart-appear a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .quantity {
   height: 3em;
@@ -601,10 +616,13 @@ body {
   color: white;
   padding: .8rem 1rem;
   border: 1px solid grey;
+  background-color:rgb(68, 99, 55)
 }
 
 .productButton:hover {
   cursor: pointer;
+  background-color:rgb(60, 60, 60);
+  transition: .3s;
 }
 
 .cartTitle {
@@ -619,28 +637,23 @@ body {
 .productDetails {
   display: flex;
   flex-direction: column;
-  justify-content: left;
   width: auto;
-  align-items: baseline;
-  margin-left: 32px;
 }
 
 .productDetails p {
   width: 100%;
 }
 
-.productDetails p:nth-of-type(1) {
-  margin-bottom: 2vh;
-}
-
 .productHeader {
-  font-size: 2.3rem;
+  font-size: 48px;
   width: 100%;
-
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .productPrice {
   font-size: 25px;
+  margin-bottom: 8px;
 }
 
 .productStock {
@@ -650,6 +663,7 @@ body {
 
 .productClass {
   padding-top: 2vw;
+  margin-bottom: 8px;
 }
 
 .body5Container {
@@ -659,7 +673,7 @@ body {
 }
 
 .container {
-  width: 90vw;
+  width: 100%;
   min-height: 10vh; 
   margin: 5vh auto; /* centers the box vertically and horizontally */
   display: flex;
@@ -671,7 +685,7 @@ body {
 .containerCont {
   background-color: white;
   height: auto;
-  Width: 100%;
+  padding: 0px 40px;
   display: flex;
   flex-direction: column;
 }
@@ -695,7 +709,8 @@ body {
 .content {
   background-color: white;
   font-family: Cambria;
-  padding-left: 6vw;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .description-content-p1 {
@@ -704,9 +719,13 @@ body {
 }
 
 .description-content-p {
-  width: 85vw;
+  width: auto;
   font-family: Cambria;
   margin-top: 3vh;
+}
+
+.description-content-p:last-of-type {
+  margin-bottom: 40px;
 }
 
 .reviews-content-h2 {
@@ -1394,12 +1413,93 @@ span.fa-stack.fa-lg {
   .overlay-text2 h1 {
     font-size: 32px;
   }
+
+  .product-details { 
+    margin-left: 0px;
+  }
+
+  .zoom {
+    width: 300px;
+  }
+
+  .productShop {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 40px;
+  }
+
+  .containerCont {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
 }
 
-@media screen and (max-width: 799px) and (min-width: 410px) {
+@media screen and (max-width: 499px) and (min-width: 410px) {
   .product-container {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+  }
+
+  .productShop {
+    padding: 40px;
+  }
+
+  .productDetails { 
+    margin-top: 16px;
+  }
+
+  .zoom {
+    width: 300px;
+  }
+
+  .productShop {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 40px;
+  }
+
+  .containerCont {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+}
+
+@media screen and (max-width: 799px) and (min-width: 500px) {
+  .product-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .productShop {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+  }
+
+  .productDetails { 
+    margin-top: 16px;
+  }
+
+  .containerCont {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .content {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
 }
@@ -1409,6 +1509,10 @@ span.fa-stack.fa-lg {
   .overlay-text2 {
     padding-top: calc(7%);
     padding-bottom: calc(7%);
+  }
+
+  .productDetails {
+    margin-left: 40px;
   }
 
   .centered-text1 {
