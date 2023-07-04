@@ -317,6 +317,15 @@ body {
   font-family: Cambria;
 }
 
+.product-img {
+  width: 100px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  color: rgb(60, 60, 60);
+}
 
 
 .hempleaf2 {
@@ -376,11 +385,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.indexh1 {
-  color: black;
-  font-family: Cambria;
 }
 
 .imagecontainer3 {
@@ -550,52 +554,34 @@ body {
   background-color: white;
   width: 100%;
   font-family: Cambria;
+  padding: 64px 40px;
 }
 
-.productDetails p {
-  margin-top: 2vh;
-  width: 100%;
-}
+
 
 .productShop a {
   text-decoration: none;
   color:rgb(45, 75, 40)
 }
 
-.zoom-container {
-  position: relative;
-  width: 100vw;
-  min-width: 100%;
-}
+
 
 .zoom {
-  width: 100vw;
-  height: 100%;
-}
+  width: 400px;
+} 
 
 .zoom:hover {
   cursor: zoom-in;
 }
 
 .zoom img {
-  display: block;
-  width: 80%;
-  padding-left: 6vw;
-  margin-top: 7vh;
-}
-
-
-.productShop p {
-  width: 80%;
-  padding-right: 2rem;
-  padding-left: 6vw;
+  width: 100%;
+  object-fit: cover;
 }
 
 .productBuy {
   display: flex;
   flex-direction: row;
-  padding-right: 2rem;
-  padding-left: 6vw;
   text-align: right;
 }
 
@@ -614,7 +600,6 @@ body {
   border-radius: 30px;
   color: white;
   padding: .8rem 1rem;
-  margin-top: -2px;
   border: 1px solid grey;
 }
 
@@ -637,6 +622,7 @@ body {
   justify-content: left;
   width: auto;
   align-items: baseline;
+  margin-left: 32px;
 }
 
 .productDetails p {
@@ -654,12 +640,10 @@ body {
 }
 
 .productPrice {
-  margin-top: -15px;
   font-size: 25px;
 }
 
 .productStock {
-  margin-top: -4px;
   margin-bottom: 22px;
   color: rgb(68, 99, 55)
 }
@@ -768,68 +752,36 @@ color: inherit;
 
 #empty-cart-message {
   height: auto;
-  padding-top: 2.5vh;
-  padding-bottom: 2.5vh;
-  padding-left: 4vw;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
   width: 85%;
   background-color: rgb(234, 229, 173);
   margin-left: 6.5vw;
   font-family: Cambria;
 }
 
-.cart {
-  font-family: Cambria;
-  margin-left: 5vw;
-}
-
 #cart-header {
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  margin-left: 30px;
-  padding-bottom: 10px;
-  padding-right: 34px;
-  border-bottom: 1px solid lightgrey;
-  color: rgb(75, 75, 75);
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgb(129, 129, 129);
+  padding-bottom: 16px;
+  color:rgb(129, 129, 129)
 }
 
-#cart-header, .cart-item {
-  display: flex;
-  justify-content: flex-start;
+.cart-container {
+  padding: 48px;
 }
-
-#cart-header > div, .cart-item > div {
-  width: 20%;
-}
-
 
 .cart-item {
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  padding: 10px;
-  border-bottom: 1px solid lightgrey;
+  margin-bottom: 32px;
 }
 
-.cart-item > div {
-  width: 20%;
-  text-align: center;
-}
-
-.cart-item > img {
-  width: 19%;
-}
-
-.cart-item > button, .cart-item > input {
-  width: 10%;
-  height: 30%;
-}
-
-.product-name {
-  font-size: .8rem;
-  margin-right: 5vw;
-  margin-left: 5vw;
-  width: 20%;
+.product-quantity {
+  padding: 8px 16px;
+  width: 80px;
+  height: 40px;
 }
 
 .remove-item-btn {
@@ -844,20 +796,16 @@ color: inherit;
   cursor: pointer;
 }
 
-.product-img {
-  height: 20%;
-}
+
 
 #total-price {
   margin-top: 4px;
 }
 
-.product-subtotal {
-  padding-left: 0px;
-}
+
 
 #return-to-shop {
-  width: 40%;
+  width: 150PX;
   border-radius: 40px;
   background-color: rgb(45, 75, 40);
   color: white;
@@ -1497,20 +1445,8 @@ span.fa-stack.fa-lg {
 
   .productShop img {
     height: auto;
-    width: 80%;
-    padding-left: 5vw;
+    width: 100%;
 }
-
-  .productDetails {
-    height: auto;
-    width: auto;
-    margin-top: 9vh;
-    margin-left: -1vw;
-  }
-
-  .indexh1 {
-    margin-left: 3vw;
-  }
 
   .logo img {
     height: 11vh;
@@ -1641,45 +1577,6 @@ span.fa-stack.fa-lg {
     height: 15vh;
   }
 
-  .cart img {
-    height: auto;
-    width: 10%;
-    padding-right: 11vw;
-  }
-
-  .product-name {
-    font-size: 1.1rem;
-    padding-right: 5vw;
-  }
-
-  #cart-header {
-    font-size: 1.1rem;
-    margin-left: 5vw;
-    padding-left: 7vw;
-  }
-
-  .cart input {
-    height: 5vh;
-    width: 4vw;
-    margin-right: 5vw;
-  }
-
- .headerSubt {
-  padding-left: 1vw;
-  margin-right: 55px;
- }
-
- .product-subtotal {
-  padding-right: 10vw;
- }
-
- .cart-item {
-  padding: none;
- }
-
- .headerClass {
-  padding-right: 9vw;
- }
 
  #update-cart-btn {
   width: 10%;

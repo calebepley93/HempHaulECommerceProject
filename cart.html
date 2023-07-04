@@ -92,7 +92,8 @@
       <h1 class="cartTitle">Cart</h1>
       <div id="empty-cart-message" style="display: none;">
         Your cart is currently empty.
-      </div>      
+      </div>     
+      <div class="cart-container">
       <div class="cart-header" id="cart-header">
         <div></div> <!-- empty div for alignment -->
         <div></div> <!-- empty div for alignment -->
@@ -102,14 +103,15 @@
       </div>
       <div class="cart">
        <!-- Repeat this section for each item in the cart -->
-       <div id="default-item" class="cart-item">
-        <button class="remove-item-btn">X</button>
-        <img class="product-img" src="product.jpg" alt="Product Name" />
-        <div class="product-name">Product Name</div>
-        <input class="product-quantity" type="number" value="1" min="1" />
-        <div class="product-subtotal">$xx.xx</div>
-      </div>
+        <div id="default-item" class="cart-item">
+          <button class="remove-item-btn">X</button>
+          <img class="product-img" src="product.jpg" alt="Product Name" />
+          <div class="product-name">Product Name</div>
+          <input class="product-quantity" type="number" value="1" min="1" />
+          <div class="product-subtotal">$xx.xx</div>
+        </div>
       <!-- End of cart item section -->
+      </div>
       </div>
       <button id="update-cart-btn" class="update-cart-btn">Update Cart</button>
       <a id="return-to-shop" class="return-to-shop" href="./shop.html">Return to Shop</a>
