@@ -488,7 +488,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1; /* Ensure it sits below content */
-  background: url('./youngpeople.png') no-repeat center center;
+  background: url('./biker1.png') no-repeat center center;
   background-size: cover;
 }
 
@@ -506,8 +506,8 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding-top: calc(10%);
-  padding-bottom: calc(10%);
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 
@@ -516,13 +516,12 @@ body {
   color: white;
   width: 100%;
   text-align: center;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 .overlay-text2 p {
   font-size: 1rem;
-  font-weight: bold;
-  color: rgb(153, 118, 53);
+  color: rgb(251, 219, 162);
   align-self: center;
   width: 100%;
 }
@@ -926,13 +925,11 @@ color: inherit;
 
 .checkoutHeader {
   font-size: 50px;
-  margin-left: -7vw;
-  padding-top: 3vh;
-  padding-bottom: 3vh;
+  margin-bottom: 24px;
 }
 
 .checkout {
-  padding-left: 6.5vw;
+  padding: 64px 40px;
   font-family: Cambria;
   padding-bottom: 10vh;
 }
@@ -942,7 +939,7 @@ color: inherit;
 }
 
 .checkout input {
-  width: 90%;
+  width: 100%;
   height: 7vh;
   background-color:rgb(234, 229, 173);
   border-radius: 6px;
@@ -957,8 +954,7 @@ color: inherit;
 }
 
 .mediaOrder h2 {
-  padding-top: 3vh;
-  padding-bottom: 4vh;
+  margin-bottom: 24px;
 }
 
 .checkout select {
@@ -969,9 +965,9 @@ color: inherit;
 }
 
 .orderContainer {
-  width: 97%;
   background-color: rgb(251, 220, 165);
   border-radius: 6x;
+  padding: 24px;
 }
 
 .alignRow {
@@ -1001,12 +997,10 @@ color: inherit;
 }
 
 .credit-card-container {
-  width: 97%;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: whitesmoke;
-  margin: 0 auto;
 }
 
 .credit-card-header {
@@ -1016,13 +1010,9 @@ color: inherit;
 
 #credit-card {
   height: 3vh;
-  margin-top: 1vh;
-  margin-left: -23vw;
 }
 
 .credit-card-label {
-  margin-top: .6vh;
-  margin-left: -22vw;
   font-size: 1.1rem;
 }
 
@@ -1044,14 +1034,17 @@ color: inherit;
 
 .expiry-cvv-container input {
   width: 45%;
-  margin-right: 3px;
+}
+
+.mediaBilling {
+  margin-right: 24px;
 }
 
 .personalData {
   font-size: 1rem;
   width: 80%;
-  padding-left: 9vw;
   margin-bottom: 3vh;
+  margin-top: 24px;
 }
 
 .termsAnd {
@@ -1061,14 +1054,12 @@ color: inherit;
 }
 
 #termsAndConditions {
-  margin-left: -27vw;
   height: 3vh;
   margin-top: 10px;
   padding-bottom: 10vh;
 }
 
 .termsAndConditionsText {
-  margin-left: -33vw;
   margin-top: 7px;
   width: 60vw;
 }
@@ -1204,14 +1195,24 @@ color: inherit;
 
  .contactImg {
   width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('./cityskyline.png') no-repeat;
-  background-size: cover;
 }
 
+.contactImg::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  background: url('./cityskyline.png') no-repeat center center;
+  background-size: cover;
+}
 
 
 .overlayText4 {
@@ -1250,7 +1251,7 @@ color: inherit;
 .overlayText4 p {
   font-size: 1rem;
   font-weight: bold;
-  color: rgb(128, 106, 36);
+  color: rgb(251, 219, 162);
 }
 
 .overlayText4 a {
@@ -1414,6 +1415,11 @@ span.fa-stack.fa-lg {
   cursor: pointer;
 }
 
+.mediaBilling h2 {
+  margin-bottom: 24px;
+}
+
+
 
 
 @media screen and (max-width: 409px) {
@@ -1482,6 +1488,14 @@ span.fa-stack.fa-lg {
     order: 1;
   }
 
+  #orderInform {
+    width: 100%;
+  }
+
+  .checkout {
+    padding: 24px;
+   }
+
 }
 
 @media screen and (max-width: 499px) and (min-width: 410px) {
@@ -1544,6 +1558,14 @@ span.fa-stack.fa-lg {
     order: 1;
   }
 
+  #orderInform {
+    width: 100%;
+  }
+
+  .checkout {
+    padding: 24px;
+   }
+
 }
 
 @media screen and (max-width: 799px) and (min-width: 500px) {
@@ -1602,14 +1624,15 @@ span.fa-stack.fa-lg {
     order: 1;
   }
 
+   .checkout {
+    padding: 40px;
+   }
+
 }
 
 @media screen and (min-width: 800px) {
 
-  .overlay-text2 {
-    padding-top: calc(7%);
-    padding-bottom: calc(7%);
-  }
+ 
 
   .productDetails {
     margin-left: 40px;
@@ -1674,9 +1697,6 @@ span.fa-stack.fa-lg {
     z-index: 0;
   }
 
-  .checkoutHeader {
-    margin-left: -6.5vw;
-  }
 
   .mediaUnder {
     display: flex;
@@ -1695,30 +1715,17 @@ span.fa-stack.fa-lg {
     width: 80%;
   }
 
-  #credit-card {
-    margin-right: 10vw;
-  }
+  
 
   .credit-card-header {
     display: flex;
     flex-direction: row;
-    margin-left: 18vw;
   }
 
-  .credit-card-label {
-    margin-left: -14vw;
-  }
+ 
 
-  .personalData {
-    margin-left: -80px;
-  }
-
-  #termsAndConditions {
-    margin-left: -80px;
-  }
 
   .termsAndConditionsText {
-    margin-left: -115px;
     padding-top: 3px;
   }
 

@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
-    <section class="about-us-header">
+    <section class="about-us-header" id="parallaxHeader">
         <div class="about-us-overlay-text">
             <h1 class="about-us-h1">About Us</h1>
             <p class="about-us-p"><a href="./index.html">Home</a> > About</p>
@@ -57,6 +57,14 @@
                 });
             });
 
+            const parallaxElement = document.getElementById('parallaxHeader');
+
+            // Listener for 'scroll' event
+            window.addEventListener('scroll', function() {
+                // Calculate the parallax effect
+                let scrollPosition = window.pageYOffset;
+                parallaxElement.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+            });
     </script>
 </body>
 </html>
